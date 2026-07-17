@@ -299,7 +299,15 @@ html[lang="en"] .lang-en { color: var(--accent); }
   font-size: 1.05rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  max-width: 52ch;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 24px;
 }
 
 .hero-desc {

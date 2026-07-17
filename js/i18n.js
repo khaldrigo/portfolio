@@ -1,0 +1,193 @@
+const I18N = {
+  "pt-BR": {
+    "nav.experience": "Experiência",
+    "nav.projects": "Projetos",
+    "nav.skills": "Skills",
+    "nav.contact": "Contato",
+
+    "hero.status": "ONLINE — em produção desde 2021",
+    "hero.name": "Rodrigo Lima",
+    "hero.role": "Senior Flutter Engineer",
+    "hero.desc": "Construo aplicativos Flutter que rodam em produção de verdade — de sensores autônomos em postes na Índia a apps bancários e plataformas offline-first. 5 anos entregando software que não pode falhar em campo.",
+    "hero.cta_projects": "Ver projetos",
+    "hero.cta_contact": "Falar comigo",
+    "hero.tel.uptime": "uptime",
+    "hero.tel.stack": "stack",
+    "hero.tel.location": "localização",
+    "hero.tel.deploys": "deploys",
+    "hero.tel.deploys_val": "BR · Índia",
+
+    "stats.years": "anos em produção",
+    "stats.projects": "produtos entregues",
+    "stats.stores": "app stores publicadas",
+    "stats.field": "dispositivos monitorados em campo",
+
+    "experience.eyebrow": "// experiência",
+    "experience.title": "Log de implantação",
+    "common.present": "presente",
+
+    "exp.citydata.role": "Senior Mobile Engineer",
+    "exp.citydata.status": "produção",
+    "exp.citydata.mode": "remoto",
+    "exp.citydata.desc": "Dono do app Flutter CitySurvey: sensores de visão computacional autônomos, instalados em postes em campo — incluindo uma implantação real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota com heartbeat, geofencing em tempo real e o CI/CD completo para Play Store e App Store.",
+
+    "exp.darvin.role": "Co-Founder & Flutter Engineer",
+    "exp.darvin.status": "produto próprio",
+    "exp.darvin.desc": "Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.",
+
+    "exp.sim.role": "Flutter Technical Lead",
+    "exp.sim.status": "contrato",
+    "exp.sim.mode": "app bancário 7SIM",
+    "exp.sim.desc": "Assumi a liderança técnica de um app bancário de empréstimo consignado após o vendor anterior entregar o projeto pela metade. Conduzi uma auditoria técnica completa do código herdado antes de decidir o que preservar e o que precisava ser refeito de verdade.",
+
+    "projects.eyebrow": "// projetos",
+    "projects.title": "Software que roda no mundo real",
+    "proj.highlight_label": "Destaque técnico",
+
+    "proj.citysurvey.pill": "FIELD DEPLOYED — ÍNDIA",
+    "proj.citysurvey.name": "CitySurvey",
+    "proj.citysurvey.sub": "CityData.ai",
+    "proj.citysurvey.desc": "Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantação real em Varanasi, Índia.",
+    "proj.citysurvey.highlight": "Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.",
+
+    "proj.sondar.pill": "EM USO — CAMPO",
+    "proj.sondar.name": "Sondar",
+    "proj.sondar.sub": "Darvin Labs",
+    "proj.sondar.desc": "Plataforma de pesquisa porta-a-porta offline-first: o entrevistador coleta dados sem internet e tudo sincroniza depois sem conflito, com relatório em PDF gerado direto no aparelho.",
+    "proj.sondar.highlight": "Sincronização idempotente: cada entrevista recebe um UUID gerado no cliente e é gravada como registro imutável (append-only) — sync duplicado nunca corrompe o dado.",
+
+    "proj.sim.pill": "EM DESENVOLVIMENTO",
+    "proj.sim.name": "7SIM",
+    "proj.sim.sub": "7 Promotora",
+    "proj.sim.desc": "App bancário de simulação e contratação de empréstimo consignado, integrado a uma instituição financeira. Segurança e confiabilidade em cada etapa do fluxo de crédito.",
+    "proj.sim.highlight": "Antes de reescrever qualquer coisa, auditei o código herdado por completo — separando o que valia preservar do que exigia mudança real, em vez de recriar por padrão.",
+
+    "proj.redacao.pill": "EM VALIDAÇÃO",
+    "proj.redacao.name": "Casa da Redação",
+    "proj.redacao.sub": "EdTech",
+    "proj.redacao.desc": "App para professores corrigirem redações manuscritas em tablet com caneta (S Pen), gravando a correção em vídeo com anotações de tinta em tempo real.",
+    "proj.redacao.highlight": "Integrei gravação de tela nativa via MediaProjection do Android (canal Kotlin/MethodChannel) sincronizada com a camada de anotação de tinta — undo, redo e borracha inclusos.",
+
+    "skills.eyebrow": "// stack",
+    "skills.title": "Ferramentas de trabalho",
+    "skills.mobile.title": "Mobile & Arquitetura",
+    "skills.native.title": "Android nativo & Dispositivos",
+    "skills.backend.title": "Backend & Dados",
+    "skills.quality.title": "Qualidade & Entrega",
+    "skills.ai.title": "Desenvolvimento AI-augmented",
+    "skills.maps.title": "Mapas & Geolocalização",
+
+    "chip.android_native": "Android nativo",
+    "chip.kotlin_native": "Kotlin nativo",
+    "chip.unit_tests": "Testes unitários",
+    "chip.widget_tests": "Testes de widget",
+
+    "edu.cs_label": "Ciência da Computação",
+    "edu.si_label": "Sistemas de Informação",
+    "edu.si_inst": "PUC Minas · em andamento",
+    "edu.lang_label": "Idiomas",
+    "edu.lang_inst": "Português nativo · Inglês fluente",
+
+    "contact.eyebrow": "// contato",
+    "contact.title": "Vamos construir algo que precisa funcionar de verdade.",
+    "contact.desc": "Aberto a novos projetos, colaborações e conversas técnicas.",
+
+    "footer.built": "construído com HTML, CSS e café"
+  },
+
+  "en": {
+    "nav.experience": "Experience",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    "nav.contact": "Contact",
+
+    "hero.status": "ONLINE — in production since 2021",
+    "hero.name": "Rodrigo Lima",
+    "hero.role": "Senior Flutter Engineer",
+    "hero.desc": "I build Flutter apps that run in real production — from autonomous sensors on street poles in India to banking apps and offline-first platforms. 5 years shipping software that can't fail in the field.",
+    "hero.cta_projects": "View projects",
+    "hero.cta_contact": "Get in touch",
+    "hero.tel.uptime": "uptime",
+    "hero.tel.stack": "stack",
+    "hero.tel.location": "location",
+    "hero.tel.deploys": "deploys",
+    "hero.tel.deploys_val": "BR · India",
+
+    "stats.years": "years in production",
+    "stats.projects": "products shipped",
+    "stats.stores": "app stores published",
+    "stats.field": "field devices monitored",
+
+    "experience.eyebrow": "// experience",
+    "experience.title": "Deployment log",
+    "common.present": "present",
+
+    "exp.citydata.role": "Senior Mobile Engineer",
+    "exp.citydata.status": "production",
+    "exp.citydata.mode": "remote",
+    "exp.citydata.desc": "Owner of the CitySurvey Flutter app: autonomous computer-vision sensors mounted on street poles — including a real deployment in Varanasi, India. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry with heartbeat monitoring, real-time geofencing, and full CI/CD for the Play Store and App Store.",
+
+    "exp.darvin.role": "Co-Founder & Flutter Engineer",
+    "exp.darvin.status": "own product",
+    "exp.darvin.desc": "Built Sondar, an offline-first field research platform, migrating a real client off KoBoToolbox onto a purpose-built solution. Configured Supabase Row Level Security and Policies from scratch, a local-first data layer with Drift/SQLite, and idempotent sync via client-side UUIDs.",
+
+    "exp.sim.role": "Flutter Technical Lead",
+    "exp.sim.status": "contract",
+    "exp.sim.mode": "7SIM banking app",
+    "exp.sim.desc": "Took over technical leadership of a payroll-loan banking app after the previous vendor delivered it half-finished. Ran a full technical audit of the legacy codebase before deciding what to keep and what actually needed to change.",
+
+    "projects.eyebrow": "// projects",
+    "projects.title": "Software that runs in the real world",
+    "proj.highlight_label": "Technical highlight",
+
+    "proj.citysurvey.pill": "FIELD DEPLOYED — INDIA",
+    "proj.citysurvey.name": "CitySurvey",
+    "proj.citysurvey.sub": "CityData.ai",
+    "proj.citysurvey.desc": "Autonomous computer-vision sensors mounted on street poles, counting people and vehicles 24/7 — with no daily human intervention. Real deployment in Varanasi, India.",
+    "proj.citysurvey.highlight": "Redesigned the device reboot mechanism: split the pure decision (RebootPolicy) from execution (RebootExecutor), with anti-loop protection and tests running on a simulated clock.",
+
+    "proj.sondar.pill": "IN USE — FIELD",
+    "proj.sondar.name": "Sondar",
+    "proj.sondar.sub": "Darvin Labs",
+    "proj.sondar.desc": "Offline-first door-to-door survey platform: interviewers collect data with no internet, and everything syncs later without conflict, with a PDF report generated on-device.",
+    "proj.sondar.highlight": "Idempotent sync: each interview gets a client-generated UUID and is written as an immutable append-only record — a duplicate sync can never corrupt the data.",
+
+    "proj.sim.pill": "IN DEVELOPMENT",
+    "proj.sim.name": "7SIM",
+    "proj.sim.sub": "7 Promotora",
+    "proj.sim.desc": "Banking app for simulating and contracting payroll loans, integrated with a financial institution. Security and reliability at every step of the credit flow.",
+    "proj.sim.highlight": "Before rewriting anything, I fully audited the legacy codebase — separating what was worth keeping from what actually needed to change, instead of recreating by default.",
+
+    "proj.redacao.pill": "IN VALIDATION",
+    "proj.redacao.name": "Casa da Redação",
+    "proj.redacao.sub": "EdTech",
+    "proj.redacao.desc": "App for teachers to grade handwritten essays on a tablet with a stylus (S Pen), recording the correction as video with real-time ink annotations.",
+    "proj.redacao.highlight": "Integrated native screen recording via Android's MediaProjection (Kotlin/MethodChannel bridge) synced with the ink annotation layer — undo, redo and eraser included.",
+
+    "skills.eyebrow": "// stack",
+    "skills.title": "Tools of the trade",
+    "skills.mobile.title": "Mobile & Architecture",
+    "skills.native.title": "Native Android & Devices",
+    "skills.backend.title": "Backend & Data",
+    "skills.quality.title": "Quality & Delivery",
+    "skills.ai.title": "AI-augmented development",
+    "skills.maps.title": "Maps & Geolocation",
+
+    "chip.android_native": "Native Android",
+    "chip.kotlin_native": "Native Kotlin",
+    "chip.unit_tests": "Unit tests",
+    "chip.widget_tests": "Widget tests",
+
+    "edu.cs_label": "Computer Science",
+    "edu.si_label": "Information Systems",
+    "edu.si_inst": "PUC Minas · in progress",
+    "edu.lang_label": "Languages",
+    "edu.lang_inst": "Native Portuguese · Fluent English",
+
+    "contact.eyebrow": "// contact",
+    "contact.title": "Let's build something that actually has to work.",
+    "contact.desc": "Open to new projects, collaborations and technical conversations.",
+
+    "footer.built": "built with HTML, CSS and coffee"
+  }
+};

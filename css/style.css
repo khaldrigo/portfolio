@@ -346,7 +346,7 @@ html[lang="en"] .lang-en { color: var(--accent); }
 
 /* ---- Device card (status readout) ---- */
 
-.hero-visual { display: flex; justify-content: center; }
+.hero-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
 .device-card {
   width: 100%;
@@ -785,6 +785,129 @@ html.dev-mode .hero-dev { display: block; }
 .hero-editor .code li { padding: 0 18px 0 46px; }
 .hero-editor .code li::before { width: 28px; }
 
+/* Phone frame — no-op wrapper in classic mode, full device mockup in dev mode */
+.phone-frame { position: relative; width: 100%; max-width: 380px; margin: 0 auto; }
+.phone-notch, .phone-camera, .phone-home-bar { display: none; }
+
+html.dev-mode .phone-frame {
+  padding: 18px 16px 28px;
+  background: linear-gradient(155deg, #29334A 0%, #131A26 55%, #05070B 100%);
+  border-radius: 56px;
+  box-shadow:
+    0 55px 90px -30px hsl(var(--shadow-color) / 0.8),
+    inset 0 0 0 2px rgba(19, 185, 253, 0.16),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.07);
+}
+
+html.dev-mode .phone-frame .device-card {
+  border-radius: 36px;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+
+html.dev-mode .phone-frame .device-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 45%);
+  pointer-events: none;
+}
+
+html.dev-mode .phone-frame::before,
+html.dev-mode .phone-frame::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(180deg, #333F58, #161D2A);
+  box-shadow: inset 0 0 0 1px rgba(19, 185, 253, 0.14);
+}
+
+/* Bottom gesture bar — shared by both device styles */
+html.dev-mode .phone-frame .phone-home-bar {
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  z-index: 3;
+}
+
+/* iPhone: Dynamic Island cut into the top of the screen + side buttons */
+html.dev-mode .phone-frame[data-frame="iphone"] .phone-notch {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 108px;
+  height: 32px;
+  background: #04060A;
+  border-radius: 17px;
+  z-index: 3;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+html.dev-mode .phone-frame[data-frame="iphone"]::before {
+  left: -5px; top: 94px; width: 5px; height: 38px; border-radius: 3px 0 0 3px;
+}
+html.dev-mode .phone-frame[data-frame="iphone"]::after {
+  right: -5px; top: 118px; width: 5px; height: 96px; border-radius: 0 3px 3px 0;
+}
+
+/* Pixel: punch-hole camera cut into the top of the screen + side buttons */
+html.dev-mode .phone-frame[data-frame="pixel"] {
+  padding: 14px 14px 24px;
+  border-radius: 48px;
+}
+html.dev-mode .phone-frame[data-frame="pixel"] .device-card { border-radius: 30px; }
+html.dev-mode .phone-frame[data-frame="pixel"] .phone-camera {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #04060A;
+  box-shadow: 0 0 0 3px #1E2734, inset 0 0 0 2px rgba(19, 185, 253, 0.15);
+  z-index: 3;
+}
+html.dev-mode .phone-frame[data-frame="pixel"]::before {
+  right: -5px; top: 108px; width: 5px; height: 56px; border-radius: 0 3px 3px 0;
+}
+html.dev-mode .phone-frame[data-frame="pixel"]::after {
+  right: -5px; top: 174px; width: 5px; height: 32px; border-radius: 0 3px 3px 0;
+}
+
+/* iPhone / Pixel picker — dev mode only */
+.device-frame-toggle {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+html.dev-mode .device-frame-toggle { display: flex; }
+
+.frame-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(223, 231, 242, 0.94);
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.frame-btn img { display: block; width: 16px; height: 16px; }
+.frame-btn:hover { border-color: var(--accent); background: #fff; transform: translateY(-2px); }
+.frame-btn.active { border-color: var(--accent); background: #fff; box-shadow: 0 0 0 3px var(--accent-soft); }
+
 /* Stats bar: labels swap for camelCase const names */
 .stat-label-dev {
   display: none;
@@ -1064,6 +1187,7 @@ html.dev-mode .edu-inst { font-family: var(--font-mono); }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .hero-visual { order: -1; }
   .device-card { max-width: 320px; }
+  .phone-frame { max-width: 320px; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
   .project-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }

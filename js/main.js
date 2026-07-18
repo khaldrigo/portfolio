@@ -40,6 +40,22 @@
 
   applyLang(currentLang);
 
+  /* ---------- Phone frame (dev mode) ---------- */
+  var phoneFrame = document.getElementById("phone-frame");
+  var frameButtons = document.querySelectorAll(".frame-btn");
+  var storedFrame = localStorage.getItem("devFrame") || "iphone";
+
+  if (phoneFrame) phoneFrame.setAttribute("data-frame", storedFrame);
+  frameButtons.forEach(function (btn) {
+    btn.classList.toggle("active", btn.dataset.frameBtn === storedFrame);
+    btn.addEventListener("click", function () {
+      var frame = btn.dataset.frameBtn;
+      phoneFrame.setAttribute("data-frame", frame);
+      localStorage.setItem("devFrame", frame);
+      frameButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+    });
+  });
+
   /* ---------- Developer mode ---------- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

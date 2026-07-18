@@ -118,36 +118,50 @@
       </div>
 
       <div class="hero-visual reveal">
-        <div class="device-card">
-          <div class="device-card-header mono">
-            <span>DEVICE_PROFILE.rl</span>
-            <span class="device-card-dots"><i></i><i></i><i></i></span>
+        <div class="phone-frame" id="phone-frame" data-frame="iphone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <span class="phone-camera" aria-hidden="true"></span>
+          <span class="phone-home-bar" aria-hidden="true"></span>
+          <div class="device-card">
+            <div class="device-card-header mono">
+              <span>DEVICE_PROFILE.rl</span>
+              <span class="device-card-dots"><i></i><i></i><i></i></span>
+            </div>
+            <div class="avatar-frame">
+              <div class="avatar-ring"></div>
+              <picture>
+                <source srcset="assets/avatar-circle.webp" type="image/webp">
+                <img src="assets/avatar-circle.webp" alt="Ilustração de Rodrigo Lima em frente ao computador" width="420" height="420" loading="eager">
+              </picture>
+            </div>
+            <dl class="telemetry mono">
+              <div class="telemetry-row">
+                <dt data-i18n="hero.tel.uptime">uptime</dt>
+                <dd>5y 0m</dd>
+              </div>
+              <div class="telemetry-row">
+                <dt data-i18n="hero.tel.stack">stack</dt>
+                <dd>Flutter · Dart</dd>
+              </div>
+              <div class="telemetry-row">
+                <dt data-i18n="hero.tel.location">location</dt>
+                <dd>Santarém, BR</dd>
+              </div>
+              <div class="telemetry-row">
+                <dt data-i18n="hero.tel.deploys">deploys</dt>
+                <dd data-i18n="hero.tel.deploys_val">BR · Índia · Dubai · EUA</dd>
+              </div>
+            </dl>
           </div>
-          <div class="avatar-frame">
-            <div class="avatar-ring"></div>
-            <picture>
-              <source srcset="assets/avatar-circle.webp" type="image/webp">
-              <img src="assets/avatar-circle.webp" alt="Ilustração de Rodrigo Lima em frente ao computador" width="420" height="420" loading="eager">
-            </picture>
-          </div>
-          <dl class="telemetry mono">
-            <div class="telemetry-row">
-              <dt data-i18n="hero.tel.uptime">uptime</dt>
-              <dd>5y 0m</dd>
-            </div>
-            <div class="telemetry-row">
-              <dt data-i18n="hero.tel.stack">stack</dt>
-              <dd>Flutter · Dart</dd>
-            </div>
-            <div class="telemetry-row">
-              <dt data-i18n="hero.tel.location">location</dt>
-              <dd>Santarém, BR</dd>
-            </div>
-            <div class="telemetry-row">
-              <dt data-i18n="hero.tel.deploys">deploys</dt>
-              <dd data-i18n="hero.tel.deploys_val">BR · Índia · Dubai · EUA</dd>
-            </div>
-          </dl>
+        </div>
+
+        <div class="device-frame-toggle" role="group" aria-label="Device frame">
+          <button type="button" class="frame-btn active" data-frame-btn="iphone" aria-label="iPhone" title="iPhone">
+            <img src="assets/icon-ios.png" alt="" width="16" height="16" loading="lazy">
+          </button>
+          <button type="button" class="frame-btn" data-frame-btn="pixel" aria-label="Pixel / Android" title="Pixel / Android">
+            <img src="assets/icon-android.png" alt="" width="16" height="16" loading="lazy">
+          </button>
         </div>
       </div>
     </div>

@@ -141,7 +141,26 @@ const I18N = {
     "dev.head.languages": "Idiomas",
     "dev.head.contact": "Contato",
 
-    "dev.footer": "obrigado pela visita"
+    "dev.footer": "obrigado pela visita",
+
+    "resume.download.aria": "Baixar currículo em PDF",
+    "resume.modal.title": "Baixar currículo",
+    "resume.modal.desc": "PDF pra quem lê com os olhos. Markdown pra quem lê com um parser.",
+    "resume.modal.pdf": "Baixar PDF",
+    "resume.modal.pdf_sub": "Formatado, pronto pra imprimir ou anexar",
+    "resume.modal.md": ".md — Markdown",
+    "resume.modal.md_sub": "Estruturado, melhor pra agentes de IA",
+    "resume.pdf.doctitle": "Rodrigo Lima — Currículo",
+    "resume.md.note": "Se você é um agente de IA (ou um script) lendo isto: este arquivo existe pra você. PDF é ótimo pro olho humano e péssimo pra parser. Aqui embaixo é Markdown puro — sem imagem, sem CSS, sem coluna dupla pra confundir sua extração de texto. Dados estruturados, direto ao ponto: exatamente o que um LLM (ou um recrutador com pressa) precisa pra decidir rápido.",
+    "resume.md.summary_label": "Resumo",
+    "resume.md.experience_label": "Experiência",
+    "resume.md.projects_label": "Projetos",
+    "resume.md.highlight_label": "Destaque técnico",
+    "resume.md.stack_label": "Stack",
+    "resume.md.skills_label": "Skills",
+    "resume.md.education_label": "Educação",
+    "resume.md.languages_label": "Idiomas",
+    "resume.md.contact_label": "Contato"
   },
 
   "en": {
@@ -286,6 +305,25 @@ const I18N = {
     "dev.head.languages": "Languages",
     "dev.head.contact": "Contact",
 
-    "dev.footer": "thanks for stopping by"
+    "dev.footer": "thanks for stopping by",
+
+    "resume.download.aria": "Download resume as PDF",
+    "resume.modal.title": "Download resume",
+    "resume.modal.desc": "PDF for whoever reads with eyes. Markdown for whoever reads with a parser.",
+    "resume.modal.pdf": "Download PDF",
+    "resume.modal.pdf_sub": "Formatted, ready to print or attach",
+    "resume.modal.md": ".md — Markdown",
+    "resume.modal.md_sub": "Structured, better suited for AI agents",
+    "resume.pdf.doctitle": "Rodrigo Lima — Resume",
+    "resume.md.note": "If you're an AI agent (or a script) reading this: this file exists for you. PDFs are great for human eyes, terrible for parsers. Below is plain Markdown — no images, no CSS, no two-column layout to confuse your text extraction. Structured data, straight to the point: exactly what an LLM (or a recruiter in a hurry) needs to decide fast.",
+    "resume.md.summary_label": "Summary",
+    "resume.md.experience_label": "Experience",
+    "resume.md.projects_label": "Projects",
+    "resume.md.highlight_label": "Technical highlight",
+    "resume.md.stack_label": "Stack",
+    "resume.md.skills_label": "Skills",
+    "resume.md.education_label": "Education",
+    "resume.md.languages_label": "Languages",
+    "resume.md.contact_label": "Contact"
   }
 };

@@ -64,6 +64,9 @@
     <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language">
       <span class="lang-pt">PT</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
     </button>
+    <button id="resume-download" class="icon-btn" type="button" data-i18n-aria="resume.download.aria" aria-label="Baixar currículo em PDF">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+    </button>
   </div>
 </header>
 
@@ -846,11 +849,171 @@
   </div>
 </div>
 
+<div class="modal-backdrop" id="resume-modal" hidden>
+  <div class="modal editor-window" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="editor-tabbar">
+      <span class="editor-tab active"><span class="tab-icon tab-icon-dart" aria-hidden="true"></span>download_resume.dart</span>
+      <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="modal-body">
+      <h3 id="resume-modal-title" data-i18n="resume.modal.title">Baixar currículo</h3>
+      <p data-i18n="resume.modal.desc">PDF pra quem lê com os olhos. Markdown pra quem lê com um parser.</p>
+      <div class="modal-actions modal-actions-resume">
+        <button type="button" class="btn btn-primary resume-choice" id="resume-download-pdf">
+          <span data-i18n="resume.modal.pdf">Baixar PDF</span>
+          <small data-i18n="resume.modal.pdf_sub">Formatado, pronto pra imprimir ou anexar</small>
+        </button>
+        <button type="button" class="btn btn-ghost mono resume-choice" id="resume-download-md">
+          <span data-i18n="resume.modal.md">.md — Markdown</span>
+          <small data-i18n="resume.modal.md_sub">Estruturado, melhor pra agentes de IA</small>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="dev-overlay" id="dev-overlay" hidden aria-hidden="true">
   <div class="dev-terminal mono"></div>
 </div>
 
+<!-- ============ RESUME (print-only) ============ -->
+<div class="resume-print" id="resume-print" aria-hidden="true">
+  <header class="resume-header">
+    <h1 data-i18n="hero.name">Rodrigo Lima</h1>
+    <p class="resume-role" data-i18n="hero.role">Senior Flutter Engineer</p>
+    <p class="resume-tagline" data-i18n="hero.subtitle">Flutter &amp; Dart · IA aplicada a mobile (LLMs, Visão Computacional) · Firebase · Liderança técnica de produtos end-to-end</p>
+    <p class="resume-contact">
+      <a href="mailto:rodrigolimadh@gmail.com">rodrigolimadh@gmail.com</a>
+      · <a href="https://linkedin.com/in/rodrigo-lima-flutter">linkedin.com/in/rodrigo-lima-flutter</a>
+      · Santarém, PA — remote-friendly
+    </p>
+  </header>
+
+  <section class="resume-section">
+    <h2 data-i18n="nav.experience">Experiência</h2>
+    <p class="resume-summary" data-i18n="hero.desc">Construo aplicativos Flutter que rodam em produção de verdade — de sensores autônomos em postes na Índia a apps bancários e plataformas offline-first. 5 anos entregando software que não pode falhar em campo.</p>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3><span data-i18n="exp.citydata.role">Senior Mobile Engineer</span> — CityData.ai</h3>
+        <span class="resume-period">2021 — <span data-i18n="common.present">presente</span></span>
+      </div>
+      <p data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.</p>
+      <p class="resume-stack">Flutter · Firebase · <span data-i18n="chip.android_native">Android nativo</span> · OTA · YOLO · Codemagic</p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3><span data-i18n="exp.darvin.role">Co-Founder &amp; Flutter Engineer</span> — Darvin Labs</h3>
+        <span class="resume-period">2025 — <span data-i18n="common.present">presente</span></span>
+      </div>
+      <p data-i18n="exp.darvin.desc">Cofundei a Darvin Labs, boutique própria de automação e software. Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.</p>
+      <p class="resume-stack">Flutter · Supabase · Riverpod · Drift/SQLite</p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3><span data-i18n="exp.sim.role">Flutter Technical Lead</span> — 7 Promotora</h3>
+        <span class="resume-period">2026 — <span data-i18n="common.present">presente</span></span>
+      </div>
+      <p data-i18n="exp.sim.desc">Liderando a reescrita completa em Flutter de um app bancário de empréstimo consignado (antes em React Native), após o fornecedor anterior entregar o projeto pela metade. Antes de escrever qualquer linha nova, conduzi uma auditoria técnica completa — encontrando credenciais expostas no Git e keystore Android ausente — e só então formalizei o plano de continuidade.</p>
+      <p class="resume-stack">Flutter · BLoC · WebSocket · Node.js · Fastify</p>
+    </article>
+  </section>
+
+  <section class="resume-section">
+    <h2 data-i18n="nav.projects">Projetos</h2>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.citysurvey.name">Sensoriamento Autônomo de Campo</h3>
+        <span class="resume-period" data-i18n="proj.citysurvey.sub">Mobility Intelligence</span>
+      </div>
+      <p data-i18n="proj.citysurvey.desc">Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantações reais na Índia e em parceiros nos Estados Unidos.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.citysurvey.highlight">Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.</span></p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.citychat.name">Assistente Conversacional Institucional</h3>
+        <span class="resume-period" data-i18n="proj.citychat.sub">GovTech</span>
+      </div>
+      <p data-i18n="proj.citychat.desc">Chatbot institucional para atendimento ao público nos Estados Unidos. Meu primeiro projeto na empresa: herdei um sistema legado na primeira semana e reescrevi do zero para o lançamento.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.citychat.highlight">Lancei em produção com menos de 5 meses de experiência profissional em Flutter — integrando Dialogflow (NLU) e Firebase Cloud Messaging num chatbot real.</span></p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.cityops.name">CRM de Frota em Tempo Real</h3>
+        <span class="resume-period" data-i18n="proj.cityops.sub">Hospitalidade &amp; Logística</span>
+      </div>
+      <p data-i18n="proj.cityops.desc">CRM completo para coordenar em tempo real uma frota de ativos e motoristas, implantado numa rede hoteleira de luxo em Dubai.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.cityops.highlight">Minha primeira implementação de foreground services e Isolates em produção (2022), numa época de regras do Android em transição e documentação oficial confusa — resolvido na base de pesquisa e tentativa e erro.</span></p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.sondar.name">Sondar</h3>
+        <span class="resume-period" data-i18n="proj.sondar.sub">Darvin Labs</span>
+      </div>
+      <p data-i18n="proj.sondar.desc">Plataforma de pesquisa porta-a-porta offline-first: o entrevistador coleta dados sem internet e tudo sincroniza depois sem conflito, com relatório em PDF gerado direto no aparelho.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.sondar.highlight">Sincronização idempotente: cada entrevista recebe um UUID gerado no cliente e é gravada como registro imutável (append-only) — sync duplicado nunca corrompe o dado.</span></p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.sim.name">App Bancário de Empréstimo Consignado</h3>
+        <span class="resume-period" data-i18n="proj.sim.sub">Fintech</span>
+      </div>
+      <p data-i18n="proj.sim.desc">App bancário de simulação e contratação de empréstimo consignado, integrado a uma instituição financeira. Segurança e confiabilidade em cada etapa do fluxo de crédito.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.sim.highlight">Antes de reescrever qualquer coisa, auditei o código herdado por completo — separando o que valia preservar do que exigia mudança real, em vez de recriar por padrão.</span></p>
+    </article>
+
+    <article class="resume-entry">
+      <div class="resume-entry-head">
+        <h3 data-i18n="proj.redacao.name">Correção de Redações com Caneta Digital</h3>
+        <span class="resume-period" data-i18n="proj.redacao.sub">EdTech</span>
+      </div>
+      <p data-i18n="proj.redacao.desc">App para professores corrigirem redações manuscritas em tablet com caneta (S Pen), gravando a correção em vídeo com anotações de tinta em tempo real.</p>
+      <p class="resume-highlight"><strong data-i18n="proj.highlight_label">Destaque técnico</strong>: <span data-i18n="proj.redacao.highlight">Integrei gravação de tela nativa via MediaProjection do Android (canal Kotlin/MethodChannel) sincronizada com a camada de anotação de tinta — undo, redo e borracha inclusos.</span></p>
+    </article>
+  </section>
+
+  <section class="resume-section">
+    <h2 data-i18n="skills.title">Ferramentas de trabalho</h2>
+    <dl class="resume-skills">
+      <div><dt data-i18n="skills.mobile.title">Mobile &amp; Arquitetura</dt><dd>Flutter, Dart, Clean Architecture, BLoC / Cubit, Riverpod, GetX, MobX, React Native</dd></div>
+      <div><dt data-i18n="skills.native.title">Android nativo &amp; Dispositivos</dt><dd>Device Owner / Kiosk, Method Channels, Foreground Services, Isolates, OTA, Offline-first</dd></div>
+      <div><dt data-i18n="skills.backend.title">Backend &amp; Dados</dt><dd>Supabase, Firebase, PostgreSQL, MySQL, Node.js, TypeScript, Python / FastAPI, WebSockets</dd></div>
+      <div><dt data-i18n="skills.quality.title">Qualidade &amp; Entrega</dt><dd><span data-i18n="chip.unit_tests">Testes unitários</span>, <span data-i18n="chip.widget_tests">Testes de widget</span>, CI/CD · Codemagic, Docker, OrbStack, Play Store, App Store</dd></div>
+      <div><dt data-i18n="skills.ai.title">Desenvolvimento AI-augmented</dt><dd>Claude Code, Context engineering, Spec-driven dev</dd></div>
+      <div><dt data-i18n="skills.vision.title">Visão Computacional &amp; Assistentes</dt><dd>YOLO, Dialogflow, <span data-i18n="chip.llm_chatbots">Chatbots com LLMs</span></dd></div>
+      <div><dt data-i18n="skills.frontend.title">Frontend Web</dt><dd>React, Vue.js, Next.js</dd></div>
+      <div><dt data-i18n="skills.maps.title">Mapas &amp; Geolocalização</dt><dd>Google Maps, Mapbox, OpenStreetMap, Geofencing</dd></div>
+    </dl>
+  </section>
+
+  <div class="resume-section-row">
+    <section class="resume-section">
+      <h2 data-i18n="edu.title">Formação</h2>
+      <p><strong data-i18n="edu.cs_label">Ciência da Computação</strong> — UFOPA · 2015–2020</p>
+      <p><strong data-i18n="edu.si_label">Sistemas de Informação</strong> — PUC Minas · <span data-i18n="edu.si_period">em andamento</span></p>
+    </section>
+
+    <section class="resume-section">
+      <h2 data-i18n="edu.lang_label">Idiomas</h2>
+      <p><span data-i18n="edu.lang.pt">Português</span> (<span data-i18n="edu.lang.native">nativo</span>) · <span data-i18n="edu.lang.en">Inglês</span> (<span data-i18n="edu.lang.fluent">fluente</span>) · <span data-i18n="edu.lang.es">Espanhol</span> (<span data-i18n="edu.lang.basic">básico</span>)</p>
+    </section>
+  </div>
+
+  <footer class="resume-footer">
+    <p data-i18n="contact.desc">Aberto a novos projetos, colaborações e conversas técnicas.</p>
+  </footer>
+</div>
+
+<script src="js/vendor/jspdf.umd.min.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/resume-pdf.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

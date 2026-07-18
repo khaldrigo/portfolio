@@ -36,6 +36,7 @@
 
   langBtn.addEventListener("click", function () {
     applyLang(currentLang === "pt-BR" ? "en" : "pt-BR");
+    langBtn.blur();
   });
 
   applyLang(currentLang);
@@ -79,10 +80,26 @@
     ["term-ok", "✓ Human-readable resume restored."]
   ];
 
+  var themeBeforeDev = null;
+
   function setDevMode(on) {
     root.classList.toggle("dev-mode", on);
     devBtn.setAttribute("aria-pressed", on ? "true" : "false");
     localStorage.setItem("devMode", on ? "1" : "0");
+
+    if (on) {
+      themeBeforeDev = root.getAttribute("data-theme") || localStorage.getItem("theme");
+      root.setAttribute("data-theme", "dark");
+    } else {
+      if (themeBeforeDev) {
+        root.setAttribute("data-theme", themeBeforeDev);
+      } else {
+        var stored = localStorage.getItem("theme");
+        if (stored) root.setAttribute("data-theme", stored);
+        else root.removeAttribute("data-theme");
+      }
+      themeBeforeDev = null;
+    }
   }
 
   if (localStorage.getItem("devMode") === "1") setDevMode(true);

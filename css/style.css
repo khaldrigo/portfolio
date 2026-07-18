@@ -90,7 +90,7 @@
 /* ---------------------------------------------------------- */
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
 body {
   margin: 0;
@@ -149,8 +149,6 @@ p { margin: 0; }
   padding: 96px 24px;
 }
 
-.section-tight { padding-top: 0; padding-bottom: 48px; }
-
 .section-head {
   display: flex;
   flex-direction: column;
@@ -197,14 +195,17 @@ p { margin: 0; }
 
 .site-nav {
   display: flex;
-  gap: 32px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .site-nav a {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   transition: color .2s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .site-nav a:hover { color: var(--text); }
@@ -229,11 +230,18 @@ p { margin: 0; }
 }
 
 .icon-btn { width: 36px; }
-.icon-btn:hover, .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Hover only on fine pointers — sticky :hover on mobile paints both PT/EN accent */
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .lang-btn:hover { border-color: var(--accent); }
+}
 
 .icon-moon { display: none; }
 :root[data-theme="dark"] .icon-sun { display: none; }
 :root[data-theme="dark"] .icon-moon { display: block; }
+html.dev-mode .icon-sun { display: none; }
+html.dev-mode .icon-moon { display: block; }
 
 .lang-btn {
   padding: 0 12px;
@@ -244,7 +252,7 @@ p { margin: 0; }
   letter-spacing: 0.02em;
 }
 
-.lang-pt, .lang-en { transition: color .2s ease; }
+.lang-pt, .lang-en { transition: color .2s ease; color: var(--text-muted); }
 .lang-sep { color: var(--text-faint); }
 html[lang="pt-BR"] .lang-pt { color: var(--accent); }
 html[lang="en"] .lang-en { color: var(--accent); }
@@ -633,16 +641,16 @@ html[lang="en"] .lang-en { color: var(--accent); }
 }
 
 /* ---------------------------------------------------------- */
-/* Education row                                                 */
+/* Education & languages                                         */
 /* ---------------------------------------------------------- */
 
 .edu-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
 }
+
+.edu-row-langs { grid-template-columns: repeat(3, 1fr); }
 
 .edu-item { display: flex; flex-direction: column; gap: 4px; }
 
@@ -658,8 +666,6 @@ html[lang="en"] .lang-en { color: var(--accent); }
 /* ---------------------------------------------------------- */
 /* Contact                                                       */
 /* ---------------------------------------------------------- */
-
-.contact-section { padding-top: 40px; }
 
 .contact-card {
   background: linear-gradient(160deg, var(--bg-elevated), var(--bg-sunken));
@@ -733,8 +739,10 @@ html[lang="en"] .lang-en { color: var(--accent); }
 .devmode-label-exit { display: none; }
 
 /* Dev theme tokens — always dark, Dart navy + Flutter sky blue.
-   Placed after the data-theme blocks so it wins at equal specificity. */
-html.dev-mode {
+   Specificity beats :root[data-theme="light"] so light preference cannot leak in. */
+html.dev-mode,
+html.dev-mode[data-theme="light"],
+html.dev-mode[data-theme="dark"] {
   --bg: #0D131E;
   --bg-elevated: #131C2B;
   --bg-sunken: #0A0F17;
@@ -976,14 +984,15 @@ html.dev-mode .skill-group .chip {
 html.dev-mode .skill-group .chip::before,
 html.dev-mode .skill-group .chip::after { content: "`"; color: var(--text-faint); }
 
-/* Education/languages: comment-styled labels */
-html.dev-mode .edu-label {
-  text-transform: none;
-  letter-spacing: normal;
-  color: var(--text-muted);
-}
-html.dev-mode .edu-label::before { content: "// "; color: var(--text-faint); }
-html.dev-mode .edu-inst { font-family: var(--font-mono); }
+/* Education / languages: classic content vs Android XML + iOS plist */
+.edu-dev, .lang-dev { display: none; }
+html.dev-mode .edu-classic,
+html.dev-mode .lang-classic { display: none; }
+html.dev-mode .edu-dev,
+html.dev-mode .lang-dev { display: block; }
+
+.edu-dev .editor-window,
+.lang-dev .editor-window { max-width: none; margin: 0; }
 
 /* Editor window */
 .editor-window {
@@ -1026,6 +1035,8 @@ html.dev-mode .edu-inst { font-family: var(--font-mono); }
 .tab-icon-yaml { background: #C3E88D; }
 .tab-icon-md   { background: #82AAFF; }
 .tab-icon-txt  { background: #8CA1BD; }
+.tab-icon-xml  { background: #3DDC84; }
+.tab-icon-plist { background: #A2AAAD; }
 
 .editor-dots { display: flex; gap: 5px; }
 .editor-dots i {

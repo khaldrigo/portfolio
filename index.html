@@ -47,6 +47,8 @@
     <a href="#experience" data-i18n="nav.experience">Experiência</a>
     <a href="#projects" data-i18n="nav.projects">Projetos</a>
     <a href="#skills" data-i18n="nav.skills">Skills</a>
+    <a href="#education" data-i18n="nav.education">Educação</a>
+    <a href="#languages" data-i18n="nav.languages">Idiomas</a>
     <a href="#contact" data-i18n="nav.contact">Contato</a>
   </nav>
   <div class="header-controls">
@@ -658,25 +660,109 @@
   </section>
 
   <!-- ============ EDUCATION ============ -->
-  <section class="section section-tight reveal edu-section">
-    <div class="edu-row">
-      <div class="edu-item">
-        <span class="mono edu-label" data-i18n="edu.cs_label">Ciência da Computação</span>
-        <span class="edu-inst">UFOPA · 2015–2020</span>
+  <section class="section reveal" id="education">
+    <div class="section-head">
+      <span class="eyebrow mono" data-i18n="edu.eyebrow">// educação</span>
+      <h2>
+        <span class="head-classic" data-i18n="edu.title">Formação</span>
+        <span class="head-dev mono"><span data-i18n="dev.head.education">Education</span><span class="head-ext">.xml</span></span>
+      </h2>
+    </div>
+
+    <div class="edu-classic">
+      <div class="edu-row">
+        <div class="edu-item">
+          <span class="mono edu-label" data-i18n="edu.cs_label">Ciência da Computação</span>
+          <span class="edu-inst">UFOPA · 2015–2020</span>
+        </div>
+        <div class="edu-item">
+          <span class="mono edu-label" data-i18n="edu.si_label">Sistemas de Informação</span>
+          <span class="edu-inst" data-i18n="edu.si_inst">PUC Minas · em andamento</span>
+        </div>
       </div>
-      <div class="edu-item">
-        <span class="mono edu-label" data-i18n="edu.si_label">Sistemas de Informação</span>
-        <span class="edu-inst" data-i18n="edu.si_inst">PUC Minas · em andamento</span>
+    </div>
+
+    <div class="edu-dev">
+      <div class="editor-window">
+        <div class="editor-tabbar">
+          <span class="editor-tab active"><span class="tab-icon tab-icon-xml" aria-hidden="true"></span>education.xml</span>
+          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <ol class="code" aria-label="education.xml">
+          <li><span class="tok-com">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></li>
+          <li><span class="tok-kw">&lt;resources</span> <span class="tok-key">package</span>=<span class="tok-str">"br.rodrigo.lima"</span><span class="tok-kw">&gt;</span></li>
+          <li>&nbsp;</li>
+          <li>  <span class="tok-kw">&lt;degree</span> <span class="tok-key">name</span>=<span class="tok-str">"computer_science"</span><span class="tok-kw">&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;title&gt;</span><span data-i18n="edu.cs_label">Ciência da Computação</span><span class="tok-kw">&lt;/title&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;institution&gt;</span>UFOPA<span class="tok-kw">&lt;/institution&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;period&gt;</span>2015–2020<span class="tok-kw">&lt;/period&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;/degree&gt;</span></li>
+          <li>&nbsp;</li>
+          <li>  <span class="tok-kw">&lt;degree</span> <span class="tok-key">name</span>=<span class="tok-str">"information_systems"</span><span class="tok-kw">&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;title&gt;</span><span data-i18n="edu.si_label">Sistemas de Informação</span><span class="tok-kw">&lt;/title&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;institution&gt;</span>PUC Minas<span class="tok-kw">&lt;/institution&gt;</span></li>
+          <li>    <span class="tok-kw">&lt;period&gt;</span><span data-i18n="edu.si_period">em andamento</span><span class="tok-kw">&lt;/period&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;/degree&gt;</span></li>
+          <li>&nbsp;</li>
+          <li><span class="tok-kw">&lt;/resources&gt;</span></li>
+        </ol>
       </div>
-      <div class="edu-item">
-        <span class="mono edu-label" data-i18n="edu.lang_label">Idiomas</span>
-        <span class="edu-inst" data-i18n="edu.lang_inst">Português nativo · Inglês fluente · Espanhol básico</span>
+    </div>
+  </section>
+
+  <!-- ============ LANGUAGES ============ -->
+  <section class="section reveal" id="languages">
+    <div class="section-head">
+      <span class="eyebrow mono" data-i18n="edu.lang.eyebrow">// idiomas</span>
+      <h2>
+        <span class="head-classic" data-i18n="edu.lang_label">Idiomas</span>
+        <span class="head-dev mono"><span data-i18n="dev.head.languages">Idiomas</span><span class="head-ext">.plist</span></span>
+      </h2>
+    </div>
+
+    <div class="lang-classic">
+      <div class="edu-row edu-row-langs">
+        <div class="edu-item">
+          <span class="mono edu-label" data-i18n="edu.lang.pt">Português</span>
+          <span class="edu-inst" data-i18n="edu.lang.native">nativo</span>
+        </div>
+        <div class="edu-item">
+          <span class="mono edu-label" data-i18n="edu.lang.en">Inglês</span>
+          <span class="edu-inst" data-i18n="edu.lang.fluent">fluente</span>
+        </div>
+        <div class="edu-item">
+          <span class="mono edu-label" data-i18n="edu.lang.es">Espanhol</span>
+          <span class="edu-inst" data-i18n="edu.lang.basic">básico</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lang-dev">
+      <div class="editor-window">
+        <div class="editor-tabbar">
+          <span class="editor-tab active"><span class="tab-icon tab-icon-plist" aria-hidden="true"></span>languages.plist</span>
+          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <ol class="code" aria-label="languages.plist">
+          <li><span class="tok-com">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></li>
+          <li><span class="tok-com">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"&gt;</span></li>
+          <li><span class="tok-kw">&lt;plist</span> <span class="tok-key">version</span>=<span class="tok-str">"1.0"</span><span class="tok-kw">&gt;</span></li>
+          <li><span class="tok-kw">&lt;dict&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;key&gt;</span>pt-BR<span class="tok-kw">&lt;/key&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;string&gt;</span><span data-i18n="edu.lang.native">nativo</span><span class="tok-kw">&lt;/string&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;key&gt;</span>en<span class="tok-kw">&lt;/key&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;string&gt;</span><span data-i18n="edu.lang.fluent">fluente</span><span class="tok-kw">&lt;/string&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;key&gt;</span>es<span class="tok-kw">&lt;/key&gt;</span></li>
+          <li>  <span class="tok-kw">&lt;string&gt;</span><span data-i18n="edu.lang.basic">básico</span><span class="tok-kw">&lt;/string&gt;</span></li>
+          <li><span class="tok-kw">&lt;/dict&gt;</span></li>
+          <li><span class="tok-kw">&lt;/plist&gt;</span></li>
+        </ol>
       </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section contact-section" id="contact">
+  <section class="section" id="contact">
     <div class="contact-card reveal">
       <span class="eyebrow mono" data-i18n="contact.eyebrow">// contato</span>
       <h2>

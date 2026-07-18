@@ -3,6 +3,8 @@ const I18N = {
     "nav.experience": "Experiência",
     "nav.projects": "Projetos",
     "nav.skills": "Skills",
+    "nav.education": "Educação",
+    "nav.languages": "Idiomas",
     "nav.contact": "Contato",
 
     "hero.status": "ONLINE — em produção desde 2021",
@@ -99,11 +101,21 @@ const I18N = {
     "chip.widget_tests": "Testes de widget",
     "chip.llm_chatbots": "Chatbots com LLMs",
 
+    "edu.title": "Formação",
     "edu.cs_label": "Ciência da Computação",
     "edu.si_label": "Sistemas de Informação",
     "edu.si_inst": "PUC Minas · em andamento",
+    "edu.si_period": "em andamento",
     "edu.lang_label": "Idiomas",
     "edu.lang_inst": "Português nativo · Inglês fluente · Espanhol básico",
+    "edu.eyebrow": "// educação",
+    "edu.lang.eyebrow": "// idiomas",
+    "edu.lang.pt": "Português",
+    "edu.lang.en": "Inglês",
+    "edu.lang.es": "Espanhol",
+    "edu.lang.native": "nativo",
+    "edu.lang.fluent": "fluente",
+    "edu.lang.basic": "básico",
 
     "contact.eyebrow": "// contato",
     "contact.title": "Vamos construir algo que precisa funcionar de verdade.",
@@ -125,6 +137,8 @@ const I18N = {
 
     "dev.head.experience": "Experiencia",
     "dev.head.projects": "Projetos",
+    "dev.head.education": "Education",
+    "dev.head.languages": "Idiomas",
     "dev.head.contact": "Contato",
 
     "dev.footer": "obrigado pela visita"
@@ -134,6 +148,8 @@ const I18N = {
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
+    "nav.education": "Education",
+    "nav.languages": "Languages",
     "nav.contact": "Contact",
 
     "hero.status": "ONLINE — in production since 2021",
@@ -230,11 +246,21 @@ const I18N = {
     "chip.widget_tests": "Widget tests",
     "chip.llm_chatbots": "LLM chatbots",
 
+    "edu.title": "Education",
     "edu.cs_label": "Computer Science",
     "edu.si_label": "Information Systems",
     "edu.si_inst": "PUC Minas · in progress",
+    "edu.si_period": "in progress",
     "edu.lang_label": "Languages",
     "edu.lang_inst": "Native Portuguese · Fluent English · Basic Spanish",
+    "edu.eyebrow": "// education",
+    "edu.lang.eyebrow": "// languages",
+    "edu.lang.pt": "Portuguese",
+    "edu.lang.en": "English",
+    "edu.lang.es": "Spanish",
+    "edu.lang.native": "native",
+    "edu.lang.fluent": "fluent",
+    "edu.lang.basic": "basic",
 
     "contact.eyebrow": "// contact",
     "contact.title": "Let's build something that actually has to work.",
@@ -256,6 +282,8 @@ const I18N = {
 
     "dev.head.experience": "Experience",
     "dev.head.projects": "Projects",
+    "dev.head.education": "Education",
+    "dev.head.languages": "Languages",
     "dev.head.contact": "Contact",
 
     "dev.footer": "thanks for stopping by"

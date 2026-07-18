@@ -110,7 +110,38 @@ const I18N = {
     "contact.desc": "Aberto a novos projetos, colaborações e conversas técnicas.",
 
     "footer.built": "construído com HTML, CSS e café",
-    "footer.joke": "Ah, e sim: este site é HTML, CSS e JS na unha, sem framework — e isso também conta como stack."
+    "footer.joke": "Ah, e sim: este site é HTML, CSS e JS na unha, sem framework — e isso também conta como stack.",
+
+    "dev.modal1.title": "Ativar Developer Mode?",
+    "dev.modal1.desc": "A página será recompilada como uma IDE. Nenhum recrutador será ferido no processo.",
+    "dev.modal1.yes": "Ativar",
+    "dev.modal1.no": "Cancelar",
+    "dev.modal2.title": "Tem certeza MESMO?",
+    "dev.modal2.desc": "Do outro lado é tudo monospace e syntax highlighting. Não diga que não avisei.",
+    "dev.modal2.no": "Melhor não",
+
+    "dev.main.doc": "Senior Flutter Engineer — 5 anos em produção real.",
+    "dev.main.focus": "Flutter · IA aplicada a mobile · Firebase",
+    "dev.main.motto": "Software que não pode falhar em campo.",
+
+    "dev.exp.j1.company": "empresa de mobility intelligence (1.500+ cidades)",
+    "dev.exp.j1.h": "kiosk mode, pipeline OTA, telemetria de frota, YOLO — Índia & EUA",
+    "dev.exp.j2.company": "Darvin Labs (cofundador)",
+    "dev.exp.j2.h": "Sondar: offline-first, Supabase RLS do zero, sync idempotente",
+    "dev.exp.j3.company": "fintech de crédito consignado",
+    "dev.exp.j3.h": "reescrita completa, auditoria de código herdado, WebSocket",
+    "dev.edu.progress": "PUC Minas (em andamento)",
+
+    "dev.pub.c1": "sensores 24/7 — Índia & EUA",
+    "dev.pub.c2": "chatbot GovTech — EUA",
+    "dev.pub.c3": "CRM de frota — Dubai",
+    "dev.pub.c4": "pesquisa offline-first — Darvin Labs",
+    "dev.pub.c5": "app bancário — reescrita completa",
+    "dev.pub.c6": "correção com S Pen — EdTech",
+    "dev.pub.c7": "engenharia de contexto diária",
+
+    "dev.contact.status": "aberto a novos projetos",
+    "dev.footer": "obrigado pela visita"
   },
 
   "en": {
@@ -224,6 +255,37 @@ const I18N = {
     "contact.desc": "Open to new projects, collaborations and technical conversations.",
 
     "footer.built": "built with HTML, CSS and coffee",
-    "footer.joke": "Oh, and yes: this site is hand-rolled HTML, CSS and JS, no framework — and that counts as stack too."
+    "footer.joke": "Oh, and yes: this site is hand-rolled HTML, CSS and JS, no framework — and that counts as stack too.",
+
+    "dev.modal1.title": "Enable Developer Mode?",
+    "dev.modal1.desc": "The page will be recompiled as an IDE. No recruiters will be harmed in the process.",
+    "dev.modal1.yes": "Enable",
+    "dev.modal1.no": "Cancel",
+    "dev.modal2.title": "Are you REALLY sure?",
+    "dev.modal2.desc": "It's all monospace and syntax highlighting on the other side. Don't say I didn't warn you.",
+    "dev.modal2.no": "Better not",
+
+    "dev.main.doc": "Senior Flutter Engineer — 5 years in real production.",
+    "dev.main.focus": "Flutter · AI applied to mobile · Firebase",
+    "dev.main.motto": "Software that can't fail in the field.",
+
+    "dev.exp.j1.company": "mobility-intelligence company (1,500+ cities)",
+    "dev.exp.j1.h": "kiosk mode, OTA pipeline, fleet telemetry, YOLO — India & US",
+    "dev.exp.j2.company": "Darvin Labs (co-founder)",
+    "dev.exp.j2.h": "Sondar: offline-first, Supabase RLS from scratch, idempotent sync",
+    "dev.exp.j3.company": "payroll-loan fintech",
+    "dev.exp.j3.h": "full rewrite, legacy-code audit, WebSocket",
+    "dev.edu.progress": "PUC Minas (in progress)",
+
+    "dev.pub.c1": "24/7 sensors — India & US",
+    "dev.pub.c2": "GovTech chatbot — US",
+    "dev.pub.c3": "fleet CRM — Dubai",
+    "dev.pub.c4": "offline-first surveys — Darvin Labs",
+    "dev.pub.c5": "banking app — full rewrite",
+    "dev.pub.c6": "S Pen grading — EdTech",
+    "dev.pub.c7": "daily context engineering",
+
+    "dev.contact.status": "open to new projects",
+    "dev.footer": "thanks for stopping by"
   }
 };

@@ -708,6 +708,266 @@ html[lang="en"] .lang-en { color: var(--accent); }
 }
 
 /* ---------------------------------------------------------- */
+/* Developer Mode — Dart/Flutter IDE theme                       */
+/* ---------------------------------------------------------- */
+
+/* Toggle button */
+.devmode-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.devmode-btn:hover { border-color: var(--accent); color: var(--accent); }
+.devmode-braces { color: var(--accent); font-weight: 700; }
+.devmode-label-exit { display: none; }
+
+/* Dev theme tokens — always dark, Dart navy + Flutter sky blue.
+   Placed after the data-theme blocks so it wins at equal specificity. */
+html.dev-mode {
+  --bg: #0D131E;
+  --bg-elevated: #131C2B;
+  --bg-sunken: #0A0F17;
+  --text: #DFE7F2;
+  --text-muted: #8CA1BD;
+  --text-faint: #55677F;
+  --border: rgba(19, 185, 253, 0.10);
+  --border-strong: rgba(19, 185, 253, 0.28);
+  --accent: #13B9FD;
+  --accent-soft: rgba(19, 185, 253, 0.12);
+  --accent-2: #FFB454;
+  --accent-2-soft: rgba(255, 180, 84, 0.12);
+  --shadow-color: 215 70% 3%;
+  color-scheme: dark;
+}
+
+html.dev-mode .devmode-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+html.dev-mode .devmode-label-on { display: none; }
+html.dev-mode .devmode-label-exit { display: inline; }
+
+/* Theme toggle is meaningless inside the IDE */
+html.dev-mode #theme-toggle { opacity: 0.35; pointer-events: none; }
+
+/* Header re-theming */
+.logo-dev { display: none; color: var(--text); font-size: 0.9rem; }
+.logo-prompt { color: var(--accent); }
+html.dev-mode .logo-classic { display: none; }
+html.dev-mode .logo-dev { display: inline; }
+html.dev-mode .site-nav a::before { content: "./"; color: var(--text-faint); }
+
+/* View switching */
+.dev-view { display: none; }
+html.dev-mode .dev-view { display: block; }
+html.dev-mode .hero-grid,
+html.dev-mode .stats-bar,
+html.dev-mode .section-head,
+html.dev-mode .timeline,
+html.dev-mode .project-grid,
+html.dev-mode .skills-grid,
+html.dev-mode .edu-section,
+html.dev-mode .contact-card,
+html.dev-mode .footer-joke { display: none; }
+
+.footer-dev { display: none; font-size: 0.72rem; }
+html.dev-mode .footer-dev { display: block; }
+
+html.dev-mode .section { padding: 48px 24px; }
+html.dev-mode .hero { padding-bottom: 0; }
+
+/* Editor window */
+.editor-window {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px hsl(var(--shadow-color) / 0.6);
+}
+
+.editor-tabbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-sunken);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+}
+
+.editor-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-muted);
+}
+.editor-tab.active { color: var(--text); }
+
+.tab-icon {
+  width: 9px;
+  height: 9px;
+  border-radius: 2.5px;
+  display: inline-block;
+}
+.tab-icon-dart { background: #13B9FD; }
+.tab-icon-json { background: #FFB454; }
+.tab-icon-yaml { background: #C3E88D; }
+.tab-icon-md   { background: #82AAFF; }
+.tab-icon-txt  { background: #8CA1BD; }
+
+.editor-dots { display: flex; gap: 5px; }
+.editor-dots i {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--border-strong); display: block;
+}
+
+/* Code body with line-number gutter */
+.code {
+  list-style: none;
+  margin: 0;
+  padding: 18px 0 22px;
+  counter-reset: line;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.code li {
+  counter-increment: line;
+  position: relative;
+  padding: 0 22px 0 60px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.code li::before {
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 40px;
+  text-align: right;
+  color: var(--text-faint);
+  opacity: 0.55;
+  user-select: none;
+}
+
+/* Syntax tokens */
+.tok-kw   { color: #82AAFF; }
+.tok-type { color: #4EC9B0; }
+.tok-fn   { color: #FFD880; }
+.tok-str  { color: #C3E88D; }
+.tok-num  { color: #F78C6C; }
+.tok-key  { color: #13B9FD; }
+.tok-com  { color: #5C7089; font-style: italic; }
+.tok-doc  { color: #6A9955; font-style: italic; }
+.tok-ann  { color: #FFB454; }
+
+/* Markdown flavors */
+.md-h1   { color: #13B9FD; font-weight: 700; }
+.md-h2   { color: #82AAFF; font-weight: 600; }
+.md-code {
+  color: #C3E88D;
+  background: rgba(195, 232, 141, 0.07);
+  border-radius: 4px;
+  padding: 1px 2px;
+}
+
+.code-link {
+  color: #C3E88D;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(195, 232, 141, 0.4);
+}
+.code-link:hover { color: var(--accent); }
+
+.code-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.05em;
+  margin-left: 2px;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+@keyframes cursor-blink { 50% { opacity: 0; } }
+
+/* Confirmation modals */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(5, 9, 15, 0.72);
+  backdrop-filter: blur(6px);
+}
+.modal-backdrop[hidden] { display: none; }
+
+.modal {
+  width: min(460px, 100%);
+  animation: modal-in .22s cubic-bezier(.2,.7,.3,1);
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-body { padding: 24px 24px 26px; }
+.modal-body h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.modal-body p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px; }
+.modal-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.modal-actions .btn { padding: 10px 20px; font-size: 0.88rem; }
+
+/* Terminal transition overlay */
+.dev-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: #0A0F17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.dev-overlay[hidden] { display: none; }
+.dev-overlay.closing { opacity: 0; }
+
+.dev-terminal {
+  width: min(560px, 100%);
+  font-size: 0.82rem;
+  line-height: 2;
+  color: #8CA1BD;
+}
+
+.term-line { opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; }
+.term-line.shown { opacity: 1; transform: none; }
+.term-line.term-cmd { color: #DFE7F2; }
+.term-line.term-cmd::before { content: "$ "; color: #13B9FD; }
+.term-line.term-ok { color: #C3E88D; }
+
+/* ---------------------------------------------------------- */
 /* Scroll reveal                                                  */
 /* ---------------------------------------------------------- */
 
@@ -754,4 +1014,17 @@ html[lang="en"] .lang-en { color: var(--accent); }
   .contact-card { padding: 40px 24px; }
   .site-header { padding: 14px 18px; }
   .stats-bar { padding: 32px 20px; }
+
+  .devmode-label-on, .devmode-label-exit { display: none; }
+  html.dev-mode .devmode-label-exit { display: none; }
+  .devmode-btn { padding: 0 10px; }
+  .code { font-size: 0.72rem; }
+  .code li { padding: 0 14px 0 42px; }
+  .code li::before { width: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-cursor { animation: none; }
+  .modal { animation: none; }
+  .term-line { opacity: 1; transform: none; transition: none; }
 }

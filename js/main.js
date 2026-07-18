@@ -40,8 +40,108 @@
 
   applyLang(currentLang);
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- Developer mode ---------- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var devBtn = document.getElementById("devmode-toggle");
+  var modal1 = document.getElementById("dev-modal-1");
+  var modal2 = document.getElementById("dev-modal-2");
+  var overlay = document.getElementById("dev-overlay");
+  var terminal = overlay.querySelector(".dev-terminal");
+
+  var BOOT_LINES = [
+    ["term-cmd", "flutter run -d portfolio"],
+    ["", "Launching lib/main.dart on Portfolio in release mode..."],
+    ["", "Compiling resume to native experience..."],
+    ["term-ok", "✓ Built rodrigo_lima 5.0.0+2026"],
+    ["", "Syncing files to device Portfolio... done."]
+  ];
+
+  var CLEAN_LINES = [
+    ["term-cmd", "flutter clean"],
+    ["", "Deleting build/ and .dart_tool/... done."],
+    ["term-ok", "✓ Human-readable resume restored."]
+  ];
+
+  function setDevMode(on) {
+    root.classList.toggle("dev-mode", on);
+    devBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    localStorage.setItem("devMode", on ? "1" : "0");
+  }
+
+  if (localStorage.getItem("devMode") === "1") setDevMode(true);
+
+  function openModal(m) {
+    m.removeAttribute("hidden");
+    var yes = m.querySelector(".modal-yes");
+    if (yes) yes.focus();
+  }
+
+  function closeModals() {
+    modal1.setAttribute("hidden", "");
+    modal2.setAttribute("hidden", "");
+  }
+
+  function runTerminal(lines, done) {
+    if (reduceMotion) { done(); return; }
+    terminal.innerHTML = "";
+    overlay.removeAttribute("hidden");
+    lines.forEach(function (line) {
+      var el = document.createElement("div");
+      el.className = "term-line mono" + (line[0] ? " " + line[0] : "");
+      el.textContent = line[1];
+      terminal.appendChild(el);
+    });
+    var els = terminal.children;
+    var i = 0;
+    (function next() {
+      if (i < els.length) {
+        els[i++].classList.add("shown");
+        setTimeout(next, 190);
+      } else {
+        setTimeout(function () {
+          done();
+          window.scrollTo(0, 0);
+          overlay.classList.add("closing");
+          setTimeout(function () {
+            overlay.setAttribute("hidden", "");
+            overlay.classList.remove("closing");
+          }, 320);
+        }, 480);
+      }
+    })();
+  }
+
+  devBtn.addEventListener("click", function () {
+    if (root.classList.contains("dev-mode")) {
+      runTerminal(CLEAN_LINES, function () { setDevMode(false); });
+    } else {
+      openModal(modal1);
+    }
+  });
+
+  [modal1, modal2].forEach(function (m) {
+    m.querySelector(".modal-no").addEventListener("click", closeModals);
+    m.addEventListener("click", function (e) {
+      if (e.target === m) closeModals();
+    });
+  });
+
+  modal1.querySelector(".modal-yes").addEventListener("click", function () {
+    modal1.setAttribute("hidden", "");
+    openModal(modal2);
+  });
+
+  modal2.querySelector(".modal-yes").addEventListener("click", function () {
+    closeModals();
+    runTerminal(BOOT_LINES, function () { setDevMode(true); });
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeModals();
+  });
+
+  /* ---------- Scroll reveal ---------- */
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
     document.querySelectorAll(".reveal").forEach(function (el) {

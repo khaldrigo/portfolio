@@ -71,18 +71,46 @@
   <section class="hero" id="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <div class="status-tag reveal">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="mono" data-i18n="hero.status">ONLINE — em produção desde 2021</span>
+        <div class="hero-classic">
+          <div class="status-tag reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="mono" data-i18n="hero.status">ONLINE — em produção desde 2021</span>
+          </div>
+          <h1 class="hero-title reveal">
+            <span data-i18n="hero.name">Rodrigo Lima</span>
+          </h1>
+          <p class="hero-role mono reveal" data-i18n="hero.role">Senior Flutter Engineer</p>
+          <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Flutter &amp; Dart · IA aplicada a mobile (LLMs, Visão Computacional) · Firebase · Liderança técnica de produtos end-to-end</p>
+          <p class="hero-desc reveal" data-i18n="hero.desc">
+            Construo aplicativos Flutter que rodam em produção de verdade — de sensores autônomos em postes na Índia a apps bancários e plataformas offline-first. 5 anos entregando software que não pode falhar em campo.
+          </p>
         </div>
-        <h1 class="hero-title reveal">
-          <span data-i18n="hero.name">Rodrigo Lima</span>
-        </h1>
-        <p class="hero-role mono reveal" data-i18n="hero.role">Senior Flutter Engineer</p>
-        <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Flutter &amp; Dart · IA aplicada a mobile (LLMs, Visão Computacional) · Firebase · Liderança técnica de produtos end-to-end</p>
-        <p class="hero-desc reveal" data-i18n="hero.desc">
-          Construo aplicativos Flutter que rodam em produção de verdade — de sensores autônomos em postes na Índia a apps bancários e plataformas offline-first. 5 anos entregando software que não pode falhar em campo.
-        </p>
+
+        <div class="hero-dev reveal">
+          <div class="editor-window hero-editor">
+            <div class="editor-tabbar">
+              <span class="editor-tab active"><span class="tab-icon tab-icon-dart" aria-hidden="true"></span>main.dart</span>
+              <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <ol class="code" aria-label="main.dart">
+              <li><span class="tok-kw">import</span> <span class="tok-str">'package:flutter/material.dart'</span>;</li>
+              <li>&nbsp;</li>
+              <li><span class="tok-type">void</span> <span class="tok-fn">main</span>() =&gt; <span class="tok-fn">runApp</span>(<span class="tok-kw">const</span> <span class="tok-type">RodrigoLima</span>());</li>
+              <li>&nbsp;</li>
+              <li><span class="tok-kw">class</span> <span class="tok-type">RodrigoLima</span> <span class="tok-kw">extends</span> <span class="tok-type">StatelessWidget</span> {</li>
+              <li>  <span class="tok-kw">const</span> <span class="tok-type">RodrigoLima</span>({<span class="tok-kw">super</span>.key});</li>
+              <li>&nbsp;</li>
+              <li>  <span class="tok-ann">@override</span></li>
+              <li>  <span class="tok-type">Widget</span> <span class="tok-fn">build</span>(<span class="tok-type">BuildContext</span> context) =&gt; <span class="tok-kw">const</span> <span class="tok-type">Portfolio</span>(</li>
+              <li>    role: <span class="tok-str">'Senior Flutter Engineer'</span>,</li>
+              <li>    focus: <span class="tok-str">'<span data-i18n="dev.main.focus">Flutter · IA aplicada a mobile · Firebase</span>'</span>,</li>
+              <li>    motto: <span class="tok-str">'<span data-i18n="dev.main.motto">Software que não pode falhar em campo.</span>'</span>,</li>
+              <li>  );<span class="code-cursor" aria-hidden="true"></span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
         <div class="hero-actions reveal">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">Ver projetos</a>
           <a href="mailto:rodrigolimadh@gmail.com" class="btn btn-ghost" data-i18n="hero.cta_contact">Falar comigo</a>
@@ -123,40 +151,6 @@
         </div>
       </div>
     </div>
-
-    <div class="dev-view reveal">
-      <div class="editor-window">
-        <div class="editor-tabbar">
-          <span class="editor-tab active"><span class="tab-icon tab-icon-dart" aria-hidden="true"></span>main.dart</span>
-          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <ol class="code" aria-label="main.dart">
-          <li><span class="tok-kw">import</span> <span class="tok-str">'package:flutter/material.dart'</span>;</li>
-          <li><span class="tok-kw">import</span> <span class="tok-str">'package:real_world/production.dart'</span>;</li>
-          <li>&nbsp;</li>
-          <li><span class="tok-type">void</span> <span class="tok-fn">main</span>() =&gt; <span class="tok-fn">runApp</span>(<span class="tok-kw">const</span> <span class="tok-type">RodrigoLima</span>());</li>
-          <li>&nbsp;</li>
-          <li><span class="tok-doc">/// <span data-i18n="dev.main.doc">Senior Flutter Engineer — 5 anos em produção real.</span></span></li>
-          <li><span class="tok-kw">class</span> <span class="tok-type">RodrigoLima</span> <span class="tok-kw">extends</span> <span class="tok-type">StatelessWidget</span> {</li>
-          <li>  <span class="tok-kw">const</span> <span class="tok-type">RodrigoLima</span>({<span class="tok-kw">super</span>.key});</li>
-          <li>&nbsp;</li>
-          <li>  <span class="tok-kw">static const</span> yearsInProduction = <span class="tok-num">5</span>;</li>
-          <li>  <span class="tok-kw">static const</span> productsShipped = <span class="tok-num">6</span>;</li>
-          <li>  <span class="tok-kw">static const</span> countriesDeployed = [<span class="tok-str">'BR'</span>, <span class="tok-str">'IN'</span>, <span class="tok-str">'AE'</span>, <span class="tok-str">'US'</span>];</li>
-          <li>  <span class="tok-kw">static const</span> fieldUptime = <span class="tok-str">'24/7'</span>;</li>
-          <li>&nbsp;</li>
-          <li>  <span class="tok-ann">@override</span></li>
-          <li>  <span class="tok-type">Widget</span> <span class="tok-fn">build</span>(<span class="tok-type">BuildContext</span> context) {</li>
-          <li>    <span class="tok-kw">return const</span> <span class="tok-type">Portfolio</span>(</li>
-          <li>      role: <span class="tok-str">'Senior Flutter Engineer'</span>,</li>
-          <li>      focus: <span class="tok-str">'<span data-i18n="dev.main.focus">Flutter · IA aplicada a mobile · Firebase</span>'</span>,</li>
-          <li>      motto: <span class="tok-str">'<span data-i18n="dev.main.motto">Software que não pode falhar em campo.</span>'</span>,</li>
-          <li>    );</li>
-          <li>  }</li>
-          <li>}<span class="code-cursor" aria-hidden="true"></span></li>
-        </ol>
-      </div>
-    </div>
   </section>
 
   <!-- ============ STATS BAR ============ -->
@@ -164,18 +158,22 @@
     <div class="stat">
       <span class="stat-num mono">5+</span>
       <span class="stat-label" data-i18n="stats.years">anos em produção</span>
+      <span class="stat-label-dev mono" aria-hidden="true">yearsInProduction</span>
     </div>
     <div class="stat">
       <span class="stat-num mono">6</span>
       <span class="stat-label" data-i18n="stats.projects">produtos entregues</span>
+      <span class="stat-label-dev mono" aria-hidden="true">productsShipped</span>
     </div>
     <div class="stat">
       <span class="stat-num mono">4</span>
       <span class="stat-label" data-i18n="stats.countries">países com deploy real</span>
+      <span class="stat-label-dev mono" aria-hidden="true">countriesDeployed</span>
     </div>
     <div class="stat">
       <span class="stat-num mono">24/7</span>
       <span class="stat-label" data-i18n="stats.field">dispositivos monitorados em campo</span>
+      <span class="stat-label-dev mono" aria-hidden="true">fieldUptime</span>
     </div>
   </section>
 
@@ -183,7 +181,10 @@
   <section class="section" id="experience">
     <div class="section-head reveal">
       <span class="eyebrow mono" data-i18n="experience.eyebrow">// experiência</span>
-      <h2 data-i18n="experience.title">Log de implantação</h2>
+      <h2>
+        <span class="head-classic" data-i18n="experience.title">Log de implantação</span>
+        <span class="head-dev mono"><span data-i18n="dev.head.experience">Experiencia</span><span class="head-ext">.json</span></span>
+      </h2>
     </div>
 
     <ol class="timeline">
@@ -192,6 +193,7 @@
           <span class="timeline-date">2021 — <span data-i18n="common.present">presente</span></span>
         </div>
         <div class="timeline-body">
+          <span class="timeline-file mono" aria-hidden="true"><span class="tab-icon tab-icon-json" aria-hidden="true"></span>citydata.json</span>
           <div class="timeline-title-row">
             <h3 data-i18n="exp.citydata.role">Senior Mobile Engineer</h3>
             <span class="chip chip-status" data-i18n="exp.citydata.status">produção</span>
@@ -214,6 +216,7 @@
           <span class="timeline-date">2025 — <span data-i18n="common.present">presente</span></span>
         </div>
         <div class="timeline-body">
+          <span class="timeline-file mono" aria-hidden="true"><span class="tab-icon tab-icon-json" aria-hidden="true"></span>darvin_labs.json</span>
           <div class="timeline-title-row">
             <h3 data-i18n="exp.darvin.role">Co-Founder &amp; Flutter Engineer</h3>
             <span class="chip chip-status" data-i18n="exp.darvin.status">produto próprio</span>
@@ -234,6 +237,7 @@
           <span class="timeline-date">2026 — <span data-i18n="common.present">presente</span></span>
         </div>
         <div class="timeline-body">
+          <span class="timeline-file mono" aria-hidden="true"><span class="tab-icon tab-icon-json" aria-hidden="true"></span>banking_app.json</span>
           <div class="timeline-title-row">
             <h3 data-i18n="exp.sim.role">Flutter Technical Lead</h3>
             <span class="chip chip-status chip-status-amber" data-i18n="exp.sim.status">contrato</span>
@@ -250,57 +254,22 @@
         </div>
       </li>
     </ol>
-
-    <div class="dev-view reveal">
-      <div class="editor-window">
-        <div class="editor-tabbar">
-          <span class="editor-tab active"><span class="tab-icon tab-icon-json" aria-hidden="true"></span>experience.json</span>
-          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <ol class="code" aria-label="experience.json">
-          <li>{</li>
-          <li>  <span class="tok-key">"name"</span>: <span class="tok-str">"Rodrigo Lima"</span>,</li>
-          <li>  <span class="tok-key">"experience"</span>: [</li>
-          <li>    {</li>
-          <li>      <span class="tok-key">"company"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j1.company">empresa de mobility intelligence (1.500+ cidades)</span>"</span>,</li>
-          <li>      <span class="tok-key">"role"</span>: <span class="tok-str">"Senior Mobile Engineer"</span>,</li>
-          <li>      <span class="tok-key">"period"</span>: <span class="tok-str">"2021 — <span data-i18n="common.present">presente</span>"</span>,</li>
-          <li>      <span class="tok-key">"highlights"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j1.h">kiosk mode, pipeline OTA, telemetria de frota, YOLO — Índia &amp; EUA</span>"</span></li>
-          <li>    },</li>
-          <li>    {</li>
-          <li>      <span class="tok-key">"company"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j2.company">Darvin Labs (cofundador)</span>"</span>,</li>
-          <li>      <span class="tok-key">"role"</span>: <span class="tok-str">"Co-Founder &amp; Flutter Engineer"</span>,</li>
-          <li>      <span class="tok-key">"period"</span>: <span class="tok-str">"2025 — <span data-i18n="common.present">presente</span>"</span>,</li>
-          <li>      <span class="tok-key">"highlights"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j2.h">Sondar: offline-first, Supabase RLS do zero, sync idempotente</span>"</span></li>
-          <li>    },</li>
-          <li>    {</li>
-          <li>      <span class="tok-key">"company"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j3.company">fintech de crédito consignado</span>"</span>,</li>
-          <li>      <span class="tok-key">"role"</span>: <span class="tok-str">"Flutter Technical Lead"</span>,</li>
-          <li>      <span class="tok-key">"period"</span>: <span class="tok-str">"2026 — <span data-i18n="common.present">presente</span>"</span>,</li>
-          <li>      <span class="tok-key">"highlights"</span>: <span class="tok-str">"<span data-i18n="dev.exp.j3.h">reescrita completa, auditoria de código herdado, WebSocket</span>"</span></li>
-          <li>    }</li>
-          <li>  ],</li>
-          <li>  <span class="tok-key">"education"</span>: [</li>
-          <li>    <span class="tok-str">"<span data-i18n="edu.cs_label">Ciência da Computação</span> — UFOPA (2015–2020)"</span>,</li>
-          <li>    <span class="tok-str">"<span data-i18n="edu.si_label">Sistemas de Informação</span> — <span data-i18n="dev.edu.progress">PUC Minas (em andamento)</span>"</span></li>
-          <li>  ],</li>
-          <li>  <span class="tok-key">"languages"</span>: <span class="tok-str">"<span data-i18n="edu.lang_inst">Português nativo · Inglês fluente · Espanhol básico</span>"</span></li>
-          <li>}</li>
-        </ol>
-      </div>
-    </div>
   </section>
 
   <!-- ============ PROJECTS ============ -->
   <section class="section" id="projects">
     <div class="section-head reveal">
       <span class="eyebrow mono" data-i18n="projects.eyebrow">// projetos</span>
-      <h2 data-i18n="projects.title">Software que roda no mundo real</h2>
+      <h2>
+        <span class="head-classic" data-i18n="projects.title">Software que roda no mundo real</span>
+        <span class="head-dev mono"><span data-i18n="dev.head.projects">Projetos</span><span class="head-ext">.yaml</span></span>
+      </h2>
     </div>
 
     <div class="project-grid">
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>field_sensing.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm" aria-hidden="true"></span>
@@ -323,6 +292,7 @@
       </article>
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>gov_chatbot.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm" aria-hidden="true"></span>
@@ -345,6 +315,7 @@
       </article>
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>fleet_crm.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm" aria-hidden="true"></span>
@@ -367,6 +338,7 @@
       </article>
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>sondar.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm" aria-hidden="true"></span>
@@ -389,6 +361,7 @@
       </article>
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>banking_app.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm status-dot-amber" aria-hidden="true"></span>
@@ -411,6 +384,7 @@
       </article>
 
       <article class="project-card reveal">
+        <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>essay_grading.yaml</div>
         <div class="project-card-top">
           <span class="status-pill">
             <span class="status-dot status-dot-sm" aria-hidden="true"></span>
@@ -433,41 +407,16 @@
       </article>
 
     </div>
-
-    <div class="dev-view reveal">
-      <div class="editor-window">
-        <div class="editor-tabbar">
-          <span class="editor-tab active"><span class="tab-icon tab-icon-yaml" aria-hidden="true"></span>pubspec.yaml</span>
-          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <ol class="code" aria-label="pubspec.yaml">
-          <li><span class="tok-key">name</span>: rodrigo_lima</li>
-          <li><span class="tok-key">description</span>: <span data-i18n="projects.title">Software que roda no mundo real</span></li>
-          <li><span class="tok-key">version</span>: <span class="tok-num">5.0.0+2026</span></li>
-          <li>&nbsp;</li>
-          <li><span class="tok-key">environment</span>:</li>
-          <li>  <span class="tok-key">sdk</span>: <span class="tok-str">"&gt;=2021.7.0 &lt;∞"</span></li>
-          <li>&nbsp;</li>
-          <li><span class="tok-key">dependencies</span>:</li>
-          <li>  <span class="tok-key">autonomous_field_sensing</span>: <span class="tok-num">^5.0.0</span>  <span class="tok-com"># <span data-i18n="dev.pub.c1">sensores 24/7 — Índia &amp; EUA</span></span></li>
-          <li>  <span class="tok-key">institutional_chatbot</span>: <span class="tok-num">^1.0.0</span>     <span class="tok-com"># <span data-i18n="dev.pub.c2">chatbot GovTech — EUA</span></span></li>
-          <li>  <span class="tok-key">fleet_crm_realtime</span>: <span class="tok-num">^2.0.0</span>        <span class="tok-com"># <span data-i18n="dev.pub.c3">CRM de frota — Dubai</span></span></li>
-          <li>  <span class="tok-key">sondar</span>: <span class="tok-num">^0.2.0</span>                    <span class="tok-com"># <span data-i18n="dev.pub.c4">pesquisa offline-first — Darvin Labs</span></span></li>
-          <li>  <span class="tok-key">payroll_loan_banking</span>: <span class="tok-num">^0.9.0-beta</span> <span class="tok-com"># <span data-i18n="dev.pub.c5">app bancário — reescrita completa</span></span></li>
-          <li>  <span class="tok-key">essay_grading_platform</span>: <span class="tok-num">^0.5.0</span>    <span class="tok-com"># <span data-i18n="dev.pub.c6">correção com S Pen — EdTech</span></span></li>
-          <li>&nbsp;</li>
-          <li><span class="tok-key">dev_dependencies</span>:</li>
-          <li>  <span class="tok-key">claude_code</span>: <span class="tok-kw">any</span>                  <span class="tok-com"># <span data-i18n="dev.pub.c7">engenharia de contexto diária</span></span></li>
-        </ol>
-      </div>
-    </div>
   </section>
 
   <!-- ============ SKILLS ============ -->
   <section class="section" id="skills">
     <div class="section-head reveal">
       <span class="eyebrow mono" data-i18n="skills.eyebrow">// stack</span>
-      <h2 data-i18n="skills.title">Ferramentas de trabalho</h2>
+      <h2>
+        <span class="head-classic" data-i18n="skills.title">Ferramentas de trabalho</span>
+        <span class="head-dev mono">Skills<span class="head-ext">.MD</span></span>
+      </h2>
     </div>
 
     <div class="skills-grid">
@@ -524,42 +473,6 @@
         </div>
       </div>
     </div>
-
-    <div class="dev-view reveal">
-      <div class="editor-window">
-        <div class="editor-tabbar">
-          <span class="editor-tab active"><span class="tab-icon tab-icon-md" aria-hidden="true"></span>skills.md</span>
-          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <ol class="code" aria-label="skills.md">
-          <li><span class="md-h1"># Skills.MD</span> <span class="tok-com">&lt;!-- pun intended --&gt;</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.mobile.title">Mobile &amp; Arquitetura</span></span></li>
-          <li><span class="md-code">`Flutter`</span> <span class="md-code">`Dart`</span> <span class="md-code">`Clean Architecture`</span> <span class="md-code">`BLoC/Cubit`</span> <span class="md-code">`Riverpod`</span> <span class="md-code">`GetX`</span> <span class="md-code">`MobX`</span> <span class="md-code">`React Native`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.native.title">Android nativo &amp; Dispositivos</span></span></li>
-          <li><span class="md-code">`Device Owner`</span> <span class="md-code">`Method Channels`</span> <span class="md-code">`Foreground Services`</span> <span class="md-code">`Isolates`</span> <span class="md-code">`OTA`</span> <span class="md-code">`Offline-first`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.backend.title">Backend &amp; Dados</span></span></li>
-          <li><span class="md-code">`Supabase`</span> <span class="md-code">`Firebase`</span> <span class="md-code">`PostgreSQL`</span> <span class="md-code">`MySQL`</span> <span class="md-code">`Node.js`</span> <span class="md-code">`TypeScript`</span> <span class="md-code">`FastAPI`</span> <span class="md-code">`WebSockets`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.quality.title">Qualidade &amp; Entrega</span></span></li>
-          <li><span class="md-code">`Testes`</span> <span class="md-code">`CI/CD`</span> <span class="md-code">`Codemagic`</span> <span class="md-code">`Docker`</span> <span class="md-code">`OrbStack`</span> <span class="md-code">`Play Store`</span> <span class="md-code">`App Store`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.ai.title">Desenvolvimento AI-augmented</span></span></li>
-          <li><span class="md-code">`Claude Code`</span> <span class="md-code">`Context engineering`</span> <span class="md-code">`Spec-driven dev`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.vision.title">Visão Computacional &amp; Assistentes</span></span></li>
-          <li><span class="md-code">`YOLO`</span> <span class="md-code">`Dialogflow`</span> <span class="md-code">`LLM chatbots`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.frontend.title">Frontend Web</span></span></li>
-          <li><span class="md-code">`React`</span> <span class="md-code">`Vue.js`</span> <span class="md-code">`Next.js`</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2">## <span data-i18n="skills.maps.title">Mapas &amp; Geolocalização</span></span></li>
-          <li><span class="md-code">`Google Maps`</span> <span class="md-code">`Mapbox`</span> <span class="md-code">`OpenStreetMap`</span> <span class="md-code">`Geofencing`</span></li>
-        </ol>
-      </div>
-    </div>
   </section>
 
   <!-- ============ EDUCATION ============ -->
@@ -583,6 +496,7 @@
   <!-- ============ CONTACT ============ -->
   <section class="section contact-section" id="contact">
     <div class="contact-card reveal">
+      <div class="card-devtab mono" aria-hidden="true"><span class="tab-icon tab-icon-txt" aria-hidden="true"></span><span data-i18n="dev.head.contact">Contato</span>.txt</div>
       <span class="eyebrow mono" data-i18n="contact.eyebrow">// contato</span>
       <h2 data-i18n="contact.title">Vamos construir algo que precisa funcionar de verdade.</h2>
       <p data-i18n="contact.desc">Aberto a novos projetos, colaborações e conversas técnicas.</p>
@@ -593,26 +507,6 @@
         <a href="https://linkedin.com/in/rodrigo-lima-flutter" class="btn btn-ghost" target="_blank" rel="noopener">
           LinkedIn
         </a>
-      </div>
-    </div>
-
-    <div class="dev-view reveal">
-      <div class="editor-window">
-        <div class="editor-tabbar">
-          <span class="editor-tab active"><span class="tab-icon tab-icon-txt" aria-hidden="true"></span>contact.txt</span>
-          <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <ol class="code" aria-label="contact.txt">
-          <li><span class="tok-com">$ cat contact.txt</span></li>
-          <li>&nbsp;</li>
-          <li><span class="tok-key">name</span>      Rodrigo Lima</li>
-          <li><span class="tok-key">email</span>     <a class="code-link" href="mailto:rodrigolimadh@gmail.com">rodrigolimadh@gmail.com</a></li>
-          <li><span class="tok-key">linkedin</span>  <a class="code-link" href="https://linkedin.com/in/rodrigo-lima-flutter" target="_blank" rel="noopener">linkedin.com/in/rodrigo-lima-flutter</a></li>
-          <li><span class="tok-key">location</span>  Santarém, PA — remote-friendly</li>
-          <li><span class="tok-key">status</span>    <span class="tok-str" data-i18n="dev.contact.status">aberto a novos projetos</span></li>
-          <li>&nbsp;</li>
-          <li><span class="md-h2"># <span data-i18n="contact.title">Vamos construir algo que precisa funcionar de verdade.</span></span></li>
-        </ol>
       </div>
     </div>
   </section>

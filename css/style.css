@@ -769,24 +769,96 @@ html.dev-mode .logo-classic { display: none; }
 html.dev-mode .logo-dev { display: inline; }
 html.dev-mode .site-nav a::before { content: "./"; color: var(--text-faint); }
 
-/* View switching */
-.dev-view { display: none; }
-html.dev-mode .dev-view { display: block; }
-html.dev-mode .hero-grid,
-html.dev-mode .stats-bar,
-html.dev-mode .section-head,
-html.dev-mode .timeline,
-html.dev-mode .project-grid,
-html.dev-mode .skills-grid,
-html.dev-mode .edu-section,
-html.dev-mode .contact-card,
+/* View switching — the IDE skin lives INSIDE each component, layout stays */
 html.dev-mode .footer-joke { display: none; }
 
 .footer-dev { display: none; font-size: 0.72rem; }
 html.dev-mode .footer-dev { display: block; }
 
-html.dev-mode .section { padding: 48px 24px; }
-html.dev-mode .hero { padding-bottom: 0; }
+/* Hero: classic copy vs mini main.dart window, side by side with the photo */
+.hero-dev { display: none; margin-bottom: 32px; }
+html.dev-mode .hero-classic { display: none; }
+html.dev-mode .hero-dev { display: block; }
+
+.hero-editor { max-width: 100%; margin: 0; }
+.hero-editor .code { font-size: 0.76rem; padding: 16px 0 18px; }
+.hero-editor .code li { padding: 0 18px 0 46px; }
+.hero-editor .code li::before { width: 28px; }
+
+/* Stats bar: labels swap for camelCase const names */
+.stat-label-dev {
+  display: none;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+html.dev-mode .stat-label { display: none; }
+html.dev-mode .stat-label-dev { display: block; }
+
+/* Section titles become Nome.ext */
+.head-dev { display: none; }
+html.dev-mode .head-classic { display: none; }
+html.dev-mode .head-dev { display: inline-flex; align-items: baseline; }
+.head-ext { color: var(--accent); }
+
+/* Timeline: filename chip above each entry, comment-styled org line */
+.timeline-file {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+html.dev-mode .timeline-file { display: inline-flex; }
+html.dev-mode .timeline-org { font-family: var(--font-mono); }
+html.dev-mode .timeline-org::before { content: "// "; color: var(--text-faint); }
+
+/* Project & contact cards: mini file tab above the content */
+.card-devtab {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px 5px 10px;
+  margin-bottom: 4px;
+}
+html.dev-mode .card-devtab { display: inline-flex; }
+
+html.dev-mode .project-sub {
+  color: var(--text-faint);
+  font-style: italic;
+}
+html.dev-mode .project-sub::before { content: "# "; }
+
+/* Skills: markdown-flavored headings and inline-code chips */
+html.dev-mode .skill-group h3 {
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+html.dev-mode .skill-group h3::before { content: "## "; color: var(--accent); }
+html.dev-mode .skill-group .chip {
+  font-family: var(--font-mono);
+  background: rgba(19, 185, 253, 0.06);
+}
+html.dev-mode .skill-group .chip::before,
+html.dev-mode .skill-group .chip::after { content: "`"; color: var(--text-faint); }
+
+/* Education/languages: comment-styled labels */
+html.dev-mode .edu-label {
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text-muted);
+}
+html.dev-mode .edu-label::before { content: "// "; color: var(--text-faint); }
+html.dev-mode .edu-inst { font-family: var(--font-mono); }
 
 /* Editor window */
 .editor-window {
@@ -1021,6 +1093,9 @@ html.dev-mode .hero { padding-bottom: 0; }
   .code { font-size: 0.72rem; }
   .code li { padding: 0 14px 0 42px; }
   .code li::before { width: 28px; }
+  .hero-editor .code { font-size: 0.68rem; }
+  .hero-editor .code li { padding: 0 10px 0 34px; }
+  .hero-editor .code li::before { width: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -790,9 +790,9 @@ html.dev-mode .hero-dev { display: block; }
 .phone-notch, .phone-camera, .phone-home-bar { display: none; }
 
 html.dev-mode .phone-frame {
-  padding: 18px 16px 28px;
+  padding: 14px 14px 14px;
   background: linear-gradient(155deg, #29334A 0%, #131A26 55%, #05070B 100%);
-  border-radius: 56px;
+  border-radius: 52px;
   box-shadow:
     0 55px 90px -30px hsl(var(--shadow-color) / 0.8),
     inset 0 0 0 2px rgba(19, 185, 253, 0.16),
@@ -800,10 +800,17 @@ html.dev-mode .phone-frame {
 }
 
 html.dev-mode .phone-frame .device-card {
-  border-radius: 36px;
+  border-radius: 38px;
+  border: none;
   box-shadow: none;
   position: relative;
   overflow: hidden;
+  /* Safe area: notch/camera sit inside the screen; header clears them */
+  padding: 52px 20px 36px;
+}
+
+html.dev-mode .phone-frame .device-card-header {
+  margin-bottom: 22px;
 }
 
 html.dev-mode .phone-frame .device-card::after {
@@ -812,6 +819,7 @@ html.dev-mode .phone-frame .device-card::after {
   inset: 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 45%);
   pointer-events: none;
+  z-index: 1;
 }
 
 html.dev-mode .phone-frame::before,
@@ -822,25 +830,25 @@ html.dev-mode .phone-frame::after {
   box-shadow: inset 0 0 0 1px rgba(19, 185, 253, 0.14);
 }
 
-/* Bottom gesture bar — shared by both device styles */
+/* Bottom gesture bar — inside the screen, shared by both frames */
 html.dev-mode .phone-frame .phone-home-bar {
   display: block;
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 134px;
+  width: 120px;
   height: 5px;
   background: rgba(255, 255, 255, 0.55);
   border-radius: 4px;
   z-index: 3;
 }
 
-/* iPhone: Dynamic Island cut into the top of the screen + side buttons */
+/* iPhone: Dynamic Island cut into the usable screen + side buttons */
 html.dev-mode .phone-frame[data-frame="iphone"] .phone-notch {
   display: block;
   position: absolute;
-  top: 4px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
   width: 108px;
@@ -851,22 +859,21 @@ html.dev-mode .phone-frame[data-frame="iphone"] .phone-notch {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 html.dev-mode .phone-frame[data-frame="iphone"]::before {
-  left: -5px; top: 94px; width: 5px; height: 38px; border-radius: 3px 0 0 3px;
+  left: -5px; top: 100px; width: 5px; height: 38px; border-radius: 3px 0 0 3px;
 }
 html.dev-mode .phone-frame[data-frame="iphone"]::after {
-  right: -5px; top: 118px; width: 5px; height: 96px; border-radius: 0 3px 3px 0;
+  right: -5px; top: 124px; width: 5px; height: 96px; border-radius: 0 3px 3px 0;
 }
 
-/* Pixel: punch-hole camera cut into the top of the screen + side buttons */
+/* Pixel: punch-hole camera inside the same screen bounds + side buttons */
 html.dev-mode .phone-frame[data-frame="pixel"] {
-  padding: 14px 14px 24px;
   border-radius: 48px;
 }
-html.dev-mode .phone-frame[data-frame="pixel"] .device-card { border-radius: 30px; }
+html.dev-mode .phone-frame[data-frame="pixel"] .device-card { border-radius: 34px; }
 html.dev-mode .phone-frame[data-frame="pixel"] .phone-camera {
   display: block;
   position: absolute;
-  top: 8px;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
   width: 15px;
@@ -877,10 +884,10 @@ html.dev-mode .phone-frame[data-frame="pixel"] .phone-camera {
   z-index: 3;
 }
 html.dev-mode .phone-frame[data-frame="pixel"]::before {
-  right: -5px; top: 108px; width: 5px; height: 56px; border-radius: 0 3px 3px 0;
+  right: -5px; top: 114px; width: 5px; height: 56px; border-radius: 0 3px 3px 0;
 }
 html.dev-mode .phone-frame[data-frame="pixel"]::after {
-  right: -5px; top: 174px; width: 5px; height: 32px; border-radius: 0 3px 3px 0;
+  right: -5px; top: 180px; width: 5px; height: 32px; border-radius: 0 3px 3px 0;
 }
 
 /* iPhone / Pixel picker — dev mode only */

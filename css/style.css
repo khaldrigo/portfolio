@@ -801,40 +801,35 @@ html.dev-mode .head-classic { display: none; }
 html.dev-mode .head-dev { display: inline-flex; align-items: baseline; }
 .head-ext { color: var(--accent); }
 
-/* Timeline: filename chip above each entry, comment-styled org line */
-.timeline-file {
-  display: none;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  margin-bottom: 8px;
-}
-html.dev-mode .timeline-file { display: inline-flex; }
-html.dev-mode .timeline-org { font-family: var(--font-mono); }
-html.dev-mode .timeline-org::before { content: "// "; color: var(--text-faint); }
+/* Timeline: each entry becomes its own JSON file window */
+.timeline-dev { display: none; }
+html.dev-mode .timeline-classic { display: none; }
+html.dev-mode .timeline-dev { display: block; }
+.timeline-dev .editor-window { max-width: 100%; margin: 0; }
 
-/* Project & contact cards: mini file tab above the content */
-.card-devtab {
-  display: none;
-  align-items: center;
-  gap: 7px;
-  width: fit-content;
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 5px 12px 5px 10px;
-  margin-bottom: 4px;
+/* Projects: each card becomes its own YAML file window */
+.project-dev { display: none; }
+html.dev-mode .project-classic { display: none; }
+html.dev-mode .project-dev { display: block; width: 100%; }
+.project-dev .editor-window { max-width: 100%; margin: 0; }
+html.dev-mode .project-card {
+  background: none;
+  border: none;
+  padding: 0;
 }
-html.dev-mode .card-devtab { display: inline-flex; }
+html.dev-mode .project-card:hover { box-shadow: none; }
 
-html.dev-mode .project-sub {
-  color: var(--text-faint);
-  font-style: italic;
+/* Contact: becomes a TXT file window */
+.contact-dev { display: none; }
+html.dev-mode .contact-classic { display: none; }
+html.dev-mode .contact-dev { display: block; width: 100%; }
+html.dev-mode .contact-card {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  align-items: stretch;
 }
-html.dev-mode .project-sub::before { content: "# "; }
 
 /* Skills: markdown-flavored headings and inline-code chips */
 html.dev-mode .skill-group h3 {

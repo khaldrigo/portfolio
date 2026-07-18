@@ -697,6 +697,14 @@ html[lang="en"] .lang-en { color: var(--accent); }
   padding: 40px 24px 56px;
   color: var(--text-faint);
   font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-joke {
+  opacity: 0.75;
+  font-size: 0.72rem;
 }
 
 /* ---------------------------------------------------------- */

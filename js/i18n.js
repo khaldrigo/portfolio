@@ -16,7 +16,7 @@ const I18N = {
     "hero.tel.stack": "stack",
     "hero.tel.location": "localização",
     "hero.tel.deploys": "deploys",
-    "hero.tel.deploys_val": "BR · Índia · Dubai",
+    "hero.tel.deploys_val": "BR · Índia · Dubai · EUA",
 
     "stats.years": "anos em produção",
     "stats.projects": "produtos entregues",
@@ -31,7 +31,7 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "produção",
     "exp.citydata.mode": "remoto",
-    "exp.citydata.desc": "Dono do app Flutter CitySurvey numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployment real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.",
+    "exp.citydata.desc": "Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "produto próprio",
@@ -39,29 +39,29 @@ const I18N = {
 
     "exp.sim.role": "Flutter Technical Lead",
     "exp.sim.status": "contrato",
-    "exp.sim.mode": "app bancário 7SIM",
+    "exp.sim.mode": "app bancário",
     "exp.sim.desc": "Liderando a reescrita completa em Flutter de um app bancário de empréstimo consignado (antes em React Native), após o fornecedor anterior entregar o projeto pela metade. Antes de escrever qualquer linha nova, conduzi uma auditoria técnica completa — encontrando credenciais expostas no Git e keystore Android ausente — e só então formalizei o plano de continuidade.",
 
     "projects.eyebrow": "// projetos",
     "projects.title": "Software que roda no mundo real",
     "proj.highlight_label": "Destaque técnico",
 
-    "proj.citysurvey.pill": "FIELD DEPLOYED — ÍNDIA",
-    "proj.citysurvey.name": "CitySurvey",
-    "proj.citysurvey.sub": "CityData.ai",
-    "proj.citysurvey.desc": "Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantação real em Varanasi, Índia.",
+    "proj.citysurvey.pill": "FIELD DEPLOYED — ÍNDIA & EUA",
+    "proj.citysurvey.name": "Sensoriamento Autônomo de Campo",
+    "proj.citysurvey.sub": "Mobility Intelligence",
+    "proj.citysurvey.desc": "Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantações reais na Índia e em parceiros nos Estados Unidos.",
     "proj.citysurvey.highlight": "Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.",
 
     "proj.citychat.pill": "EM PRODUÇÃO — EUA",
-    "proj.citychat.name": "CityChat",
-    "proj.citychat.sub": "CityData.ai",
-    "proj.citychat.desc": "Chatbot para o Departamento de Polícia de San Leandro, Califórnia. Meu primeiro projeto na empresa: herdei um sistema legado na primeira semana e reescrevi do zero para o lançamento.",
+    "proj.citychat.name": "Assistente Conversacional Institucional",
+    "proj.citychat.sub": "GovTech",
+    "proj.citychat.desc": "Chatbot institucional para atendimento ao público nos Estados Unidos. Meu primeiro projeto na empresa: herdei um sistema legado na primeira semana e reescrevi do zero para o lançamento.",
     "proj.citychat.highlight": "Lancei em produção com menos de 5 meses de experiência profissional em Flutter — integrando Dialogflow (NLU) e Firebase Cloud Messaging num chatbot real.",
 
     "proj.cityops.pill": "EM PRODUÇÃO — DUBAI",
-    "proj.cityops.name": "CityOps",
-    "proj.cityops.sub": "CityData.ai",
-    "proj.cityops.desc": "CRM completo para coordenar em tempo real uma frota de ativos e motoristas, implantado na rede de hotéis de luxo Jumeirah, em Dubai.",
+    "proj.cityops.name": "CRM de Frota em Tempo Real",
+    "proj.cityops.sub": "Hospitalidade & Logística",
+    "proj.cityops.desc": "CRM completo para coordenar em tempo real uma frota de ativos e motoristas, implantado numa rede hoteleira de luxo em Dubai.",
     "proj.cityops.highlight": "Minha primeira implementação de foreground services e Isolates em produção (2022), numa época de regras do Android em transição e documentação oficial confusa — resolvido na base de pesquisa e tentativa e erro.",
 
     "proj.sondar.pill": "EM USO — CAMPO",
@@ -71,13 +71,13 @@ const I18N = {
     "proj.sondar.highlight": "Sincronização idempotente: cada entrevista recebe um UUID gerado no cliente e é gravada como registro imutável (append-only) — sync duplicado nunca corrompe o dado.",
 
     "proj.sim.pill": "EM DESENVOLVIMENTO",
-    "proj.sim.name": "7SIM",
-    "proj.sim.sub": "7 Promotora",
+    "proj.sim.name": "App Bancário de Empréstimo Consignado",
+    "proj.sim.sub": "Fintech",
     "proj.sim.desc": "App bancário de simulação e contratação de empréstimo consignado, integrado a uma instituição financeira. Segurança e confiabilidade em cada etapa do fluxo de crédito.",
     "proj.sim.highlight": "Antes de reescrever qualquer coisa, auditei o código herdado por completo — separando o que valia preservar do que exigia mudança real, em vez de recriar por padrão.",
 
     "proj.redacao.pill": "EM VALIDAÇÃO",
-    "proj.redacao.name": "Casa da Redação",
+    "proj.redacao.name": "Correção de Redações com Caneta Digital",
     "proj.redacao.sub": "EdTech",
     "proj.redacao.desc": "App para professores corrigirem redações manuscritas em tablet com caneta (S Pen), gravando a correção em vídeo com anotações de tinta em tempo real.",
     "proj.redacao.highlight": "Integrei gravação de tela nativa via MediaProjection do Android (canal Kotlin/MethodChannel) sincronizada com a camada de anotação de tinta — undo, redo e borracha inclusos.",
@@ -109,7 +109,8 @@ const I18N = {
     "contact.title": "Vamos construir algo que precisa funcionar de verdade.",
     "contact.desc": "Aberto a novos projetos, colaborações e conversas técnicas.",
 
-    "footer.built": "construído com HTML, CSS e café"
+    "footer.built": "construído com HTML, CSS e café",
+    "footer.joke": "Ah, e sim: este site é HTML, CSS e JS na unha, sem framework — e isso também conta como stack."
   },
 
   "en": {
@@ -129,7 +130,7 @@ const I18N = {
     "hero.tel.stack": "stack",
     "hero.tel.location": "location",
     "hero.tel.deploys": "deploys",
-    "hero.tel.deploys_val": "BR · India · Dubai",
+    "hero.tel.deploys_val": "BR · India · Dubai · US",
 
     "stats.years": "years in production",
     "stats.projects": "products shipped",
@@ -144,7 +145,7 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "production",
     "exp.citydata.mode": "remote",
-    "exp.citydata.desc": "Owner of the CitySurvey Flutter app at a mobility-intelligence company operating in 1,500+ cities: autonomous computer-vision sensors mounted on street poles, with a real deployment in Varanasi, India. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry, and YOLO models for detecting people and vehicles — plus formal technical mentoring for other developers on the team.",
+    "exp.citydata.desc": "Owner of the field-sensing Flutter app at a mobility-intelligence company operating in 1,500+ cities: autonomous computer-vision sensors mounted on street poles, with real deployments in India and with partners in the United States. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry, and YOLO models for detecting people and vehicles — plus formal technical mentoring for other developers on the team.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "own product",
@@ -152,29 +153,29 @@ const I18N = {
 
     "exp.sim.role": "Flutter Technical Lead",
     "exp.sim.status": "contract",
-    "exp.sim.mode": "7SIM banking app",
+    "exp.sim.mode": "banking app",
     "exp.sim.desc": "Leading a full Flutter rewrite of a payroll-loan banking app (previously React Native), after the previous vendor delivered it half-finished. Before writing a single new line, I ran a full technical audit — finding credentials exposed in Git and a missing Android keystore — and only then formalized the continuity plan.",
 
     "projects.eyebrow": "// projects",
     "projects.title": "Software that runs in the real world",
     "proj.highlight_label": "Technical highlight",
 
-    "proj.citysurvey.pill": "FIELD DEPLOYED — INDIA",
-    "proj.citysurvey.name": "CitySurvey",
-    "proj.citysurvey.sub": "CityData.ai",
-    "proj.citysurvey.desc": "Autonomous computer-vision sensors mounted on street poles, counting people and vehicles 24/7 — with no daily human intervention. Real deployment in Varanasi, India.",
+    "proj.citysurvey.pill": "FIELD DEPLOYED — INDIA & US",
+    "proj.citysurvey.name": "Autonomous Field Sensing",
+    "proj.citysurvey.sub": "Mobility Intelligence",
+    "proj.citysurvey.desc": "Autonomous computer-vision sensors mounted on street poles, counting people and vehicles 24/7 — with no daily human intervention. Real deployments in India and with partners in the United States.",
     "proj.citysurvey.highlight": "Redesigned the device reboot mechanism: split the pure decision (RebootPolicy) from execution (RebootExecutor), with anti-loop protection and tests running on a simulated clock.",
 
-    "proj.citychat.pill": "IN PRODUCTION — USA",
-    "proj.citychat.name": "CityChat",
-    "proj.citychat.sub": "CityData.ai",
-    "proj.citychat.desc": "Chatbot for the San Leandro Police Department, California. My first project at the company: I inherited a legacy system in my first week and rewrote it from scratch for launch.",
+    "proj.citychat.pill": "IN PRODUCTION — US",
+    "proj.citychat.name": "Institutional Conversational Assistant",
+    "proj.citychat.sub": "GovTech",
+    "proj.citychat.desc": "Institutional chatbot for public-facing service in the United States. My first project at the company: I inherited a legacy system in my first week and rewrote it from scratch for launch.",
     "proj.citychat.highlight": "Shipped to production with under 5 months of professional Flutter experience — integrating Dialogflow (NLU) and Firebase Cloud Messaging into a real chatbot.",
 
     "proj.cityops.pill": "IN PRODUCTION — DUBAI",
-    "proj.cityops.name": "CityOps",
-    "proj.cityops.sub": "CityData.ai",
-    "proj.cityops.desc": "Full CRM coordinating a fleet of assets and drivers in real time, deployed at the Jumeirah luxury hotel group in Dubai.",
+    "proj.cityops.name": "Real-time Fleet CRM",
+    "proj.cityops.sub": "Hospitality & Logistics",
+    "proj.cityops.desc": "Full CRM coordinating a fleet of assets and drivers in real time, deployed at a luxury hotel group in Dubai.",
     "proj.cityops.highlight": "My first production implementation of foreground services and Isolates (2022), during a period of shifting Android rules and confusing official docs — solved through research and trial and error.",
 
     "proj.sondar.pill": "IN USE — FIELD",
@@ -184,13 +185,13 @@ const I18N = {
     "proj.sondar.highlight": "Idempotent sync: each interview gets a client-generated UUID and is written as an immutable append-only record — a duplicate sync can never corrupt the data.",
 
     "proj.sim.pill": "IN DEVELOPMENT",
-    "proj.sim.name": "7SIM",
-    "proj.sim.sub": "7 Promotora",
+    "proj.sim.name": "Payroll-Loan Banking App",
+    "proj.sim.sub": "Fintech",
     "proj.sim.desc": "Banking app for simulating and contracting payroll loans, integrated with a financial institution. Security and reliability at every step of the credit flow.",
     "proj.sim.highlight": "Before rewriting anything, I fully audited the legacy codebase — separating what was worth keeping from what actually needed to change, instead of recreating by default.",
 
     "proj.redacao.pill": "IN VALIDATION",
-    "proj.redacao.name": "Casa da Redação",
+    "proj.redacao.name": "Handwritten Essay Grading Platform",
     "proj.redacao.sub": "EdTech",
     "proj.redacao.desc": "App for teachers to grade handwritten essays on a tablet with a stylus (S Pen), recording the correction as video with real-time ink annotations.",
     "proj.redacao.highlight": "Integrated native screen recording via Android's MediaProjection (Kotlin/MethodChannel bridge) synced with the ink annotation layer — undo, redo and eraser included.",
@@ -222,6 +223,7 @@ const I18N = {
     "contact.title": "Let's build something that actually has to work.",
     "contact.desc": "Open to new projects, collaborations and technical conversations.",
 
-    "footer.built": "built with HTML, CSS and coffee"
+    "footer.built": "built with HTML, CSS and coffee",
+    "footer.joke": "Oh, and yes: this site is hand-rolled HTML, CSS and JS, no framework — and that counts as stack too."
   }
 };

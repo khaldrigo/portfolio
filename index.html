@@ -111,7 +111,7 @@
             </div>
             <div class="telemetry-row">
               <dt data-i18n="hero.tel.deploys">deploys</dt>
-              <dd data-i18n="hero.tel.deploys_val">BR · IN</dd>
+              <dd data-i18n="hero.tel.deploys_val">BR · Índia · Dubai</dd>
             </div>
           </dl>
         </div>
@@ -126,12 +126,12 @@
       <span class="stat-label" data-i18n="stats.years">anos em produção</span>
     </div>
     <div class="stat">
-      <span class="stat-num mono">4</span>
+      <span class="stat-num mono">6</span>
       <span class="stat-label" data-i18n="stats.projects">produtos entregues</span>
     </div>
     <div class="stat">
-      <span class="stat-num mono">2</span>
-      <span class="stat-label" data-i18n="stats.stores">app stores publicadas</span>
+      <span class="stat-num mono">3</span>
+      <span class="stat-label" data-i18n="stats.countries">países com deploy real</span>
     </div>
     <div class="stat">
       <span class="stat-num mono">24/7</span>
@@ -157,12 +157,13 @@
             <span class="chip chip-status" data-i18n="exp.citydata.status">produção</span>
           </div>
           <p class="timeline-org">CityData.ai · <span data-i18n="exp.citydata.mode">remoto</span></p>
-          <p data-i18n="exp.citydata.desc">Dono do app Flutter CitySurvey: sensores de visão computacional autônomos, instalados em postes em campo — incluindo uma implantação real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota com heartbeat, geofencing em tempo real e o CI/CD completo para Play Store e App Store.</p>
+          <p data-i18n="exp.citydata.desc">Dono do app Flutter CitySurvey numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployment real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.</p>
           <div class="chip-row">
             <span class="chip mono">Flutter</span>
             <span class="chip mono">Firebase</span>
             <span class="chip mono" data-i18n="chip.android_native">Android nativo</span>
             <span class="chip mono">OTA</span>
+            <span class="chip mono">YOLO</span>
             <span class="chip mono">Codemagic</span>
           </div>
         </div>
@@ -178,7 +179,7 @@
             <span class="chip chip-status" data-i18n="exp.darvin.status">produto próprio</span>
           </div>
           <p class="timeline-org">Darvin Labs · Santarém, PA</p>
-          <p data-i18n="exp.darvin.desc">Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.</p>
+          <p data-i18n="exp.darvin.desc">Cofundei a Darvin Labs, boutique própria de automação e software. Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.</p>
           <div class="chip-row">
             <span class="chip mono">Flutter</span>
             <span class="chip mono">Supabase</span>
@@ -198,10 +199,11 @@
             <span class="chip chip-status chip-status-amber" data-i18n="exp.sim.status">contrato</span>
           </div>
           <p class="timeline-org">7 Promotora · <span data-i18n="exp.sim.mode">app bancário 7SIM</span></p>
-          <p data-i18n="exp.sim.desc">Assumi a liderança técnica de um app bancário de empréstimo consignado após o vendor anterior entregar o projeto pela metade. Conduzi uma auditoria técnica completa do código herdado antes de decidir o que preservar e o que precisava ser refeito de verdade.</p>
+          <p data-i18n="exp.sim.desc">Liderando a reescrita completa em Flutter de um app bancário de empréstimo consignado (antes em React Native), após o fornecedor anterior entregar o projeto pela metade. Antes de escrever qualquer linha nova, conduzi uma auditoria técnica completa — encontrando credenciais expostas no Git e keystore Android ausente — e só então formalizei o plano de continuidade.</p>
           <div class="chip-row">
             <span class="chip mono">Flutter</span>
             <span class="chip mono">BLoC</span>
+            <span class="chip mono">WebSocket</span>
             <span class="chip mono">Node.js</span>
             <span class="chip mono">Fastify</span>
           </div>
@@ -238,6 +240,50 @@
           <span class="chip mono">Device Owner</span>
           <span class="chip mono">OTA</span>
           <span class="chip mono">Firebase</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-top">
+          <span class="status-pill">
+            <span class="status-dot status-dot-sm" aria-hidden="true"></span>
+            <span class="mono" data-i18n="proj.citychat.pill">EM PRODUÇÃO — EUA</span>
+          </span>
+        </div>
+        <h3 data-i18n="proj.citychat.name">CityChat</h3>
+        <p class="project-sub" data-i18n="proj.citychat.sub">CityData.ai</p>
+        <p class="project-desc" data-i18n="proj.citychat.desc">Chatbot para o Departamento de Polícia de San Leandro, Califórnia. Meu primeiro projeto na empresa: herdei um sistema legado na primeira semana e reescrevi do zero para o lançamento.</p>
+        <div class="project-highlight">
+          <span class="mono highlight-label" data-i18n="proj.highlight_label">Destaque técnico</span>
+          <p data-i18n="proj.citychat.highlight">Lancei em produção com menos de 5 meses de experiência profissional em Flutter — integrando Dialogflow (NLU) e Firebase Cloud Messaging num chatbot real.</p>
+        </div>
+        <div class="chip-row">
+          <span class="chip mono">Flutter</span>
+          <span class="chip mono">Dialogflow</span>
+          <span class="chip mono">Firebase</span>
+          <span class="chip mono">FCM</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-top">
+          <span class="status-pill">
+            <span class="status-dot status-dot-sm" aria-hidden="true"></span>
+            <span class="mono" data-i18n="proj.cityops.pill">EM PRODUÇÃO — DUBAI</span>
+          </span>
+        </div>
+        <h3 data-i18n="proj.cityops.name">CityOps</h3>
+        <p class="project-sub" data-i18n="proj.cityops.sub">CityData.ai</p>
+        <p class="project-desc" data-i18n="proj.cityops.desc">CRM completo para coordenar em tempo real uma frota de ativos e motoristas, implantado na rede de hotéis de luxo Jumeirah, em Dubai.</p>
+        <div class="project-highlight">
+          <span class="mono highlight-label" data-i18n="proj.highlight_label">Destaque técnico</span>
+          <p data-i18n="proj.cityops.highlight">Minha primeira implementação de foreground services e Isolates em produção (2022), numa época de regras do Android em transição e documentação oficial confusa — resolvido na base de pesquisa e tentativa e erro.</p>
+        </div>
+        <div class="chip-row">
+          <span class="chip mono">Flutter</span>
+          <span class="chip mono">Firebase</span>
+          <span class="chip mono">Foreground Services</span>
+          <span class="chip mono">Isolates</span>
         </div>
       </article>
 
@@ -329,14 +375,14 @@
         <h3 class="mono" data-i18n="skills.native.title">Android nativo &amp; Dispositivos</h3>
         <div class="chip-row">
           <span class="chip">Device Owner / Kiosk</span><span class="chip">Method Channels</span>
-          <span class="chip">Foreground Services</span><span class="chip">OTA</span><span class="chip">Offline-first</span>
+          <span class="chip">Foreground Services</span><span class="chip">Isolates</span><span class="chip">OTA</span><span class="chip">Offline-first</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h3 class="mono" data-i18n="skills.backend.title">Backend &amp; Dados</h3>
         <div class="chip-row">
           <span class="chip">Supabase</span><span class="chip">Firebase</span><span class="chip">PostgreSQL</span>
-          <span class="chip">MySQL</span><span class="chip">Node.js</span><span class="chip">Python / FastAPI</span>
+          <span class="chip">MySQL</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Python / FastAPI</span><span class="chip">WebSockets</span>
         </div>
       </div>
       <div class="skill-group reveal">
@@ -350,6 +396,18 @@
         <h3 class="mono" data-i18n="skills.ai.title">Desenvolvimento AI-augmented</h3>
         <div class="chip-row">
           <span class="chip">Claude Code</span><span class="chip">Context engineering</span><span class="chip">Spec-driven dev</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="mono" data-i18n="skills.vision.title">Visão Computacional &amp; Assistentes</h3>
+        <div class="chip-row">
+          <span class="chip">YOLO</span><span class="chip">Dialogflow</span><span class="chip" data-i18n="chip.llm_chatbots">Chatbots com LLMs</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="mono" data-i18n="skills.frontend.title">Frontend Web</h3>
+        <div class="chip-row">
+          <span class="chip">React</span><span class="chip">Vue.js</span><span class="chip">Next.js</span><span class="chip">React Native</span>
         </div>
       </div>
       <div class="skill-group reveal">
@@ -374,7 +432,7 @@
       </div>
       <div class="edu-item">
         <span class="mono edu-label" data-i18n="edu.lang_label">Idiomas</span>
-        <span class="edu-inst" data-i18n="edu.lang_inst">Português nativo · Inglês fluente</span>
+        <span class="edu-inst" data-i18n="edu.lang_inst">Português nativo · Inglês fluente · Espanhol básico</span>
       </div>
     </div>
   </section>

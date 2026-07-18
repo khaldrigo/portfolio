@@ -16,11 +16,12 @@ const I18N = {
     "hero.tel.stack": "stack",
     "hero.tel.location": "localização",
     "hero.tel.deploys": "deploys",
-    "hero.tel.deploys_val": "BR · Índia",
+    "hero.tel.deploys_val": "BR · Índia · Dubai",
 
     "stats.years": "anos em produção",
     "stats.projects": "produtos entregues",
     "stats.stores": "app stores publicadas",
+    "stats.countries": "países com deploy real",
     "stats.field": "dispositivos monitorados em campo",
 
     "experience.eyebrow": "// experiência",
@@ -30,16 +31,16 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "produção",
     "exp.citydata.mode": "remoto",
-    "exp.citydata.desc": "Dono do app Flutter CitySurvey: sensores de visão computacional autônomos, instalados em postes em campo — incluindo uma implantação real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota com heartbeat, geofencing em tempo real e o CI/CD completo para Play Store e App Store.",
+    "exp.citydata.desc": "Dono do app Flutter CitySurvey numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployment real em Varanasi, Índia. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "produto próprio",
-    "exp.darvin.desc": "Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.",
+    "exp.darvin.desc": "Cofundei a Darvin Labs, boutique própria de automação e software. Construí o Sondar, plataforma de pesquisa de campo offline-first, migrando um cliente real do KoBoToolbox para uma solução própria. Row Level Security e Policies do Supabase configuradas do zero, camada local-first com Drift/SQLite e sincronização idempotente via UUIDs client-side.",
 
     "exp.sim.role": "Flutter Technical Lead",
     "exp.sim.status": "contrato",
     "exp.sim.mode": "app bancário 7SIM",
-    "exp.sim.desc": "Assumi a liderança técnica de um app bancário de empréstimo consignado após o vendor anterior entregar o projeto pela metade. Conduzi uma auditoria técnica completa do código herdado antes de decidir o que preservar e o que precisava ser refeito de verdade.",
+    "exp.sim.desc": "Liderando a reescrita completa em Flutter de um app bancário de empréstimo consignado (antes em React Native), após o fornecedor anterior entregar o projeto pela metade. Antes de escrever qualquer linha nova, conduzi uma auditoria técnica completa — encontrando credenciais expostas no Git e keystore Android ausente — e só então formalizei o plano de continuidade.",
 
     "projects.eyebrow": "// projetos",
     "projects.title": "Software que roda no mundo real",
@@ -50,6 +51,18 @@ const I18N = {
     "proj.citysurvey.sub": "CityData.ai",
     "proj.citysurvey.desc": "Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantação real em Varanasi, Índia.",
     "proj.citysurvey.highlight": "Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.",
+
+    "proj.citychat.pill": "EM PRODUÇÃO — EUA",
+    "proj.citychat.name": "CityChat",
+    "proj.citychat.sub": "CityData.ai",
+    "proj.citychat.desc": "Chatbot para o Departamento de Polícia de San Leandro, Califórnia. Meu primeiro projeto na empresa: herdei um sistema legado na primeira semana e reescrevi do zero para o lançamento.",
+    "proj.citychat.highlight": "Lancei em produção com menos de 5 meses de experiência profissional em Flutter — integrando Dialogflow (NLU) e Firebase Cloud Messaging num chatbot real.",
+
+    "proj.cityops.pill": "EM PRODUÇÃO — DUBAI",
+    "proj.cityops.name": "CityOps",
+    "proj.cityops.sub": "CityData.ai",
+    "proj.cityops.desc": "CRM completo para coordenar em tempo real uma frota de ativos e motoristas, implantado na rede de hotéis de luxo Jumeirah, em Dubai.",
+    "proj.cityops.highlight": "Minha primeira implementação de foreground services e Isolates em produção (2022), numa época de regras do Android em transição e documentação oficial confusa — resolvido na base de pesquisa e tentativa e erro.",
 
     "proj.sondar.pill": "EM USO — CAMPO",
     "proj.sondar.name": "Sondar",
@@ -76,18 +89,21 @@ const I18N = {
     "skills.backend.title": "Backend & Dados",
     "skills.quality.title": "Qualidade & Entrega",
     "skills.ai.title": "Desenvolvimento AI-augmented",
+    "skills.vision.title": "Visão Computacional & Assistentes",
+    "skills.frontend.title": "Frontend Web",
     "skills.maps.title": "Mapas & Geolocalização",
 
     "chip.android_native": "Android nativo",
     "chip.kotlin_native": "Kotlin nativo",
     "chip.unit_tests": "Testes unitários",
     "chip.widget_tests": "Testes de widget",
+    "chip.llm_chatbots": "Chatbots com LLMs",
 
     "edu.cs_label": "Ciência da Computação",
     "edu.si_label": "Sistemas de Informação",
     "edu.si_inst": "PUC Minas · em andamento",
     "edu.lang_label": "Idiomas",
-    "edu.lang_inst": "Português nativo · Inglês fluente",
+    "edu.lang_inst": "Português nativo · Inglês fluente · Espanhol básico",
 
     "contact.eyebrow": "// contato",
     "contact.title": "Vamos construir algo que precisa funcionar de verdade.",
@@ -113,11 +129,12 @@ const I18N = {
     "hero.tel.stack": "stack",
     "hero.tel.location": "location",
     "hero.tel.deploys": "deploys",
-    "hero.tel.deploys_val": "BR · India",
+    "hero.tel.deploys_val": "BR · India · Dubai",
 
     "stats.years": "years in production",
     "stats.projects": "products shipped",
     "stats.stores": "app stores published",
+    "stats.countries": "countries deployed to",
     "stats.field": "field devices monitored",
 
     "experience.eyebrow": "// experience",
@@ -127,16 +144,16 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "production",
     "exp.citydata.mode": "remote",
-    "exp.citydata.desc": "Owner of the CitySurvey Flutter app: autonomous computer-vision sensors mounted on street poles — including a real deployment in Varanasi, India. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry with heartbeat monitoring, real-time geofencing, and full CI/CD for the Play Store and App Store.",
+    "exp.citydata.desc": "Owner of the CitySurvey Flutter app at a mobility-intelligence company operating in 1,500+ cities: autonomous computer-vision sensors mounted on street poles, with a real deployment in Varanasi, India. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry, and YOLO models for detecting people and vehicles — plus formal technical mentoring for other developers on the team.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "own product",
-    "exp.darvin.desc": "Built Sondar, an offline-first field research platform, migrating a real client off KoBoToolbox onto a purpose-built solution. Configured Supabase Row Level Security and Policies from scratch, a local-first data layer with Drift/SQLite, and idempotent sync via client-side UUIDs.",
+    "exp.darvin.desc": "Co-founded Darvin Labs, my own automation and software boutique. Built Sondar, an offline-first field research platform, migrating a real client off KoBoToolbox onto a purpose-built solution. Configured Supabase Row Level Security and Policies from scratch, a local-first data layer with Drift/SQLite, and idempotent sync via client-side UUIDs.",
 
     "exp.sim.role": "Flutter Technical Lead",
     "exp.sim.status": "contract",
     "exp.sim.mode": "7SIM banking app",
-    "exp.sim.desc": "Took over technical leadership of a payroll-loan banking app after the previous vendor delivered it half-finished. Ran a full technical audit of the legacy codebase before deciding what to keep and what actually needed to change.",
+    "exp.sim.desc": "Leading a full Flutter rewrite of a payroll-loan banking app (previously React Native), after the previous vendor delivered it half-finished. Before writing a single new line, I ran a full technical audit — finding credentials exposed in Git and a missing Android keystore — and only then formalized the continuity plan.",
 
     "projects.eyebrow": "// projects",
     "projects.title": "Software that runs in the real world",
@@ -147,6 +164,18 @@ const I18N = {
     "proj.citysurvey.sub": "CityData.ai",
     "proj.citysurvey.desc": "Autonomous computer-vision sensors mounted on street poles, counting people and vehicles 24/7 — with no daily human intervention. Real deployment in Varanasi, India.",
     "proj.citysurvey.highlight": "Redesigned the device reboot mechanism: split the pure decision (RebootPolicy) from execution (RebootExecutor), with anti-loop protection and tests running on a simulated clock.",
+
+    "proj.citychat.pill": "IN PRODUCTION — USA",
+    "proj.citychat.name": "CityChat",
+    "proj.citychat.sub": "CityData.ai",
+    "proj.citychat.desc": "Chatbot for the San Leandro Police Department, California. My first project at the company: I inherited a legacy system in my first week and rewrote it from scratch for launch.",
+    "proj.citychat.highlight": "Shipped to production with under 5 months of professional Flutter experience — integrating Dialogflow (NLU) and Firebase Cloud Messaging into a real chatbot.",
+
+    "proj.cityops.pill": "IN PRODUCTION — DUBAI",
+    "proj.cityops.name": "CityOps",
+    "proj.cityops.sub": "CityData.ai",
+    "proj.cityops.desc": "Full CRM coordinating a fleet of assets and drivers in real time, deployed at the Jumeirah luxury hotel group in Dubai.",
+    "proj.cityops.highlight": "My first production implementation of foreground services and Isolates (2022), during a period of shifting Android rules and confusing official docs — solved through research and trial and error.",
 
     "proj.sondar.pill": "IN USE — FIELD",
     "proj.sondar.name": "Sondar",
@@ -173,18 +202,21 @@ const I18N = {
     "skills.backend.title": "Backend & Data",
     "skills.quality.title": "Quality & Delivery",
     "skills.ai.title": "AI-augmented development",
+    "skills.vision.title": "Computer Vision & Assistants",
+    "skills.frontend.title": "Frontend Web",
     "skills.maps.title": "Maps & Geolocation",
 
     "chip.android_native": "Native Android",
     "chip.kotlin_native": "Native Kotlin",
     "chip.unit_tests": "Unit tests",
     "chip.widget_tests": "Widget tests",
+    "chip.llm_chatbots": "LLM chatbots",
 
     "edu.cs_label": "Computer Science",
     "edu.si_label": "Information Systems",
     "edu.si_inst": "PUC Minas · in progress",
     "edu.lang_label": "Languages",
-    "edu.lang_inst": "Native Portuguese · Fluent English",
+    "edu.lang_inst": "Native Portuguese · Fluent English · Basic Spanish",
 
     "contact.eyebrow": "// contact",
     "contact.title": "Let's build something that actually has to work.",

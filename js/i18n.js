@@ -19,6 +19,8 @@ const I18N = {
     "hero.tel.location": "localização",
     "hero.tel.deploys": "deploys",
     "hero.tel.deploys_val": "BR · Índia · Dubai · EUA",
+    "hero.tel.award": "prêmio",
+    "hero.tel.award_val": "1 desafio global (US$ 3M) vencido",
 
     "stats.years": "anos em produção",
     "stats.projects": "produtos entregues",
@@ -33,7 +35,7 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "produção",
     "exp.citydata.mode": "remoto",
-    "exp.citydata.desc": "Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.",
+    "exp.citydata.desc": "Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time. Um dos sistemas que ajudei a construir — o CityFlow — venceu o Sustainable Cities Challenge da Toyota Mobility Foundation (US$ 3M) em Varanasi, cidade com mais de 170 milhões de visitantes/ano.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "produto próprio",
@@ -49,10 +51,12 @@ const I18N = {
     "proj.highlight_label": "Destaque técnico",
 
     "proj.citysurvey.pill": "FIELD DEPLOYED — ÍNDIA & EUA",
+    "proj.citysurvey.award_pill": "🏆 WINNER — TMF SUSTAINABLE CITIES CHALLENGE 2026",
     "proj.citysurvey.name": "Sensoriamento Autônomo de Campo",
     "proj.citysurvey.sub": "Mobility Intelligence",
     "proj.citysurvey.desc": "Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantações reais na Índia e em parceiros nos Estados Unidos.",
     "proj.citysurvey.highlight": "Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.",
+    "proj.citysurvey.award": "Toyota Mobility Foundation Sustainable Cities Challenge — Varanasi (US$ 3M) · 2026",
 
     "proj.citychat.pill": "EM PRODUÇÃO — EUA",
     "proj.citychat.name": "Assistente Conversacional Institucional",
@@ -83,6 +87,13 @@ const I18N = {
     "proj.redacao.sub": "EdTech",
     "proj.redacao.desc": "App para professores corrigirem redações manuscritas em tablet com caneta (S Pen), gravando a correção em vídeo com anotações de tinta em tempo real.",
     "proj.redacao.highlight": "Integrei gravação de tela nativa via MediaProjection do Android (canal Kotlin/MethodChannel) sincronizada com a camada de anotação de tinta — undo, redo e borracha inclusos.",
+
+    "nav.changelog": "Changelog",
+    "changelog.eyebrow": "// changelog",
+    "changelog.title": "Registro de conquistas",
+    "changelog.entry.tag": "[2026.07] — 🏆 AWARD",
+    "changelog.entry.title": "CityFlow vence TMF Sustainable Cities Challenge ($3M) — Varanasi, Índia",
+    "changelog.entry.desc": "CitySensor sobreviveu 12+ meses em produção: quedas de energia, falta de internet, 50°C+ — zero perda de dados de análise.",
 
     "skills.eyebrow": "// stack",
     "skills.title": "Ferramentas de trabalho",
@@ -183,6 +194,8 @@ const I18N = {
     "hero.tel.location": "location",
     "hero.tel.deploys": "deploys",
     "hero.tel.deploys_val": "BR · India · Dubai · US",
+    "hero.tel.award": "award",
+    "hero.tel.award_val": "1 global challenge won ($3M)",
 
     "stats.years": "years in production",
     "stats.projects": "products shipped",
@@ -197,7 +210,7 @@ const I18N = {
     "exp.citydata.role": "Senior Mobile Engineer",
     "exp.citydata.status": "production",
     "exp.citydata.mode": "remote",
-    "exp.citydata.desc": "Owner of the field-sensing Flutter app at a mobility-intelligence company operating in 1,500+ cities: autonomous computer-vision sensors mounted on street poles, with real deployments in India and with partners in the United States. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry, and YOLO models for detecting people and vehicles — plus formal technical mentoring for other developers on the team.",
+    "exp.citydata.desc": "Owner of the field-sensing Flutter app at a mobility-intelligence company operating in 1,500+ cities: autonomous computer-vision sensors mounted on street poles, with real deployments in India and with partners in the United States. Built the kiosk mode (Device Owner), OTA update pipeline, fleet telemetry, and YOLO models for detecting people and vehicles — plus formal technical mentoring for other developers on the team. One of the systems I helped build — CityFlow — won the Toyota Mobility Foundation's Sustainable Cities Challenge ($3M) in Varanasi, a city with 170M+ annual visitors.",
 
     "exp.darvin.role": "Co-Founder & Flutter Engineer",
     "exp.darvin.status": "own product",
@@ -213,10 +226,12 @@ const I18N = {
     "proj.highlight_label": "Technical highlight",
 
     "proj.citysurvey.pill": "FIELD DEPLOYED — INDIA & US",
+    "proj.citysurvey.award_pill": "🏆 WINNER — TMF SUSTAINABLE CITIES CHALLENGE 2026",
     "proj.citysurvey.name": "Autonomous Field Sensing",
     "proj.citysurvey.sub": "Mobility Intelligence",
     "proj.citysurvey.desc": "Autonomous computer-vision sensors mounted on street poles, counting people and vehicles 24/7 — with no daily human intervention. Real deployments in India and with partners in the United States.",
     "proj.citysurvey.highlight": "Redesigned the device reboot mechanism: split the pure decision (RebootPolicy) from execution (RebootExecutor), with anti-loop protection and tests running on a simulated clock.",
+    "proj.citysurvey.award": "Toyota Mobility Foundation Sustainable Cities Challenge — Varanasi ($3M) · 2026",
 
     "proj.citychat.pill": "IN PRODUCTION — US",
     "proj.citychat.name": "Institutional Conversational Assistant",
@@ -247,6 +262,13 @@ const I18N = {
     "proj.redacao.sub": "EdTech",
     "proj.redacao.desc": "App for teachers to grade handwritten essays on a tablet with a stylus (S Pen), recording the correction as video with real-time ink annotations.",
     "proj.redacao.highlight": "Integrated native screen recording via Android's MediaProjection (Kotlin/MethodChannel bridge) synced with the ink annotation layer — undo, redo and eraser included.",
+
+    "nav.changelog": "Changelog",
+    "changelog.eyebrow": "// changelog",
+    "changelog.title": "Achievement log",
+    "changelog.entry.tag": "[2026.07] — 🏆 AWARD",
+    "changelog.entry.title": "CityFlow wins TMF Sustainable Cities Challenge ($3M) — Varanasi, India",
+    "changelog.entry.desc": "CitySensor survived 12+ months in production: power outages, no internet, 50°C+ heat — zero analytics data loss.",
 
     "skills.eyebrow": "// stack",
     "skills.title": "Tools of the trade",

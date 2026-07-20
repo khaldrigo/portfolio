@@ -46,6 +46,7 @@
   <nav class="site-nav" aria-label="Navegação principal">
     <a href="#experience" data-i18n="nav.experience">Experiência</a>
     <a href="#projects" data-i18n="nav.projects">Projetos</a>
+    <a href="#changelog" data-i18n="nav.changelog">Changelog</a>
     <a href="#skills" data-i18n="nav.skills">Skills</a>
     <a href="#education" data-i18n="nav.education">Educação</a>
     <a href="#languages" data-i18n="nav.languages">Idiomas</a>
@@ -155,6 +156,10 @@
                 <dt data-i18n="hero.tel.deploys">deploys</dt>
                 <dd data-i18n="hero.tel.deploys_val">BR · Índia · Dubai · EUA</dd>
               </div>
+              <div class="telemetry-row telemetry-row-award">
+                <dt data-i18n="hero.tel.award">prêmio</dt>
+                <dd data-i18n="hero.tel.award_val">1 desafio global (US$ 3M) vencido</dd>
+              </div>
             </dl>
             <span class="phone-home-bar" aria-hidden="true"></span>
           </div>
@@ -218,7 +223,7 @@
               <span class="chip chip-status" data-i18n="exp.citydata.status">produção</span>
             </div>
             <p class="timeline-org">CityData.ai · <span data-i18n="exp.citydata.mode">remoto</span></p>
-            <p data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.</p>
+            <p data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time. Um dos sistemas que ajudei a construir — o CityFlow — venceu o Sustainable Cities Challenge da Toyota Mobility Foundation (US$ 3M) em Varanasi, cidade com mais de 170 milhões de visitantes/ano.</p>
             <div class="chip-row">
               <span class="chip mono">Flutter</span>
               <span class="chip mono">Firebase</span>
@@ -241,7 +246,7 @@
                 <li>  <span class="tok-key">"org"</span>: <span class="tok-str">"CityData.ai · <span data-i18n="exp.citydata.mode">remoto</span>"</span>,</li>
                 <li>  <span class="tok-key">"period"</span>: <span class="tok-str">"2021 — <span data-i18n="common.present">presente</span>"</span>,</li>
                 <li>  <span class="tok-key">"status"</span>: <span class="tok-str">"<span data-i18n="exp.citydata.status">produção</span>"</span>,</li>
-                <li>  <span class="tok-key">"description"</span>: <span class="tok-str">"<span data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.</span>"</span>,</li>
+                <li>  <span class="tok-key">"description"</span>: <span class="tok-str">"<span data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time. Um dos sistemas que ajudei a construir — o CityFlow — venceu o Sustainable Cities Challenge da Toyota Mobility Foundation (US$ 3M) em Varanasi, cidade com mais de 170 milhões de visitantes/ano.</span>"</span>,</li>
                 <li>  <span class="tok-key">"stack"</span>: [<span class="tok-str">"Flutter"</span>, <span class="tok-str">"Firebase"</span>, <span class="tok-str">"<span data-i18n="chip.android_native">Android nativo</span>"</span>, <span class="tok-str">"OTA"</span>, <span class="tok-str">"YOLO"</span>, <span class="tok-str">"Codemagic"</span>]</li>
                 <li>}</li>
               </ol>
@@ -354,6 +359,9 @@
               <span class="status-dot status-dot-sm" aria-hidden="true"></span>
               <span class="mono" data-i18n="proj.citysurvey.pill">FIELD DEPLOYED — ÍNDIA &amp; EUA</span>
             </span>
+            <span class="status-pill status-pill-award">
+              <span class="mono" data-i18n="proj.citysurvey.award_pill">🏆 WINNER — TMF SUSTAINABLE CITIES CHALLENGE 2026</span>
+            </span>
           </div>
           <h3 data-i18n="proj.citysurvey.name">Sensoriamento Autônomo de Campo</h3>
           <p class="project-sub" data-i18n="proj.citysurvey.sub">Mobility Intelligence</p>
@@ -383,6 +391,7 @@
               <li><span class="tok-key">description</span>: <span class="tok-str" data-i18n="proj.citysurvey.desc">Sensores autônomos de visão computacional montados em postes urbanos, contando pessoas e veículos 24/7 — sem intervenção humana no dia a dia. Implantações reais na Índia e em parceiros nos Estados Unidos.</span></li>
               <li><span class="tok-key">highlight</span>: <span class="tok-str" data-i18n="proj.citysurvey.highlight">Redesenhei o mecanismo de reboot dos dispositivos: separei a decisão pura (RebootPolicy) da execução (RebootExecutor), com proteção anti-loop e testes com relógio simulado.</span></li>
               <li><span class="tok-key">stack</span>: [<span class="tok-str">Flutter</span>, <span class="tok-str">Device Owner</span>, <span class="tok-str">OTA</span>, <span class="tok-str">Firebase</span>]</li>
+              <li><span class="tok-key">award</span>: <span class="tok-str" data-i18n="proj.citysurvey.award">Toyota Mobility Foundation Sustainable Cities Challenge — Varanasi (US$ 3M) · 2026</span></li>
             </ol>
           </div>
         </div>
@@ -593,6 +602,30 @@
         </div>
       </article>
 
+    </div>
+  </section>
+
+  <!-- ============ CHANGELOG ============ -->
+  <section class="section reveal" id="changelog">
+    <div class="section-head">
+      <span class="eyebrow mono" data-i18n="changelog.eyebrow">// changelog</span>
+      <h2>
+        <span class="head-classic" data-i18n="changelog.title">Registro de conquistas</span>
+        <span class="head-dev mono">CHANGELOG<span class="head-ext">.md</span></span>
+      </h2>
+    </div>
+
+    <div class="editor-window">
+      <div class="editor-tabbar">
+        <span class="editor-tab active"><span class="tab-icon tab-icon-md" aria-hidden="true"></span>CHANGELOG.md</span>
+        <span class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+      <ol class="code" aria-label="CHANGELOG.md">
+        <li><span class="tok-kw">## <span data-i18n="changelog.entry.tag">[2026.07] — 🏆 AWARD</span></span></li>
+        <li>&nbsp;</li>
+        <li><span class="tok-ann">### <span data-i18n="changelog.entry.title">CityFlow vence TMF Sustainable Cities Challenge ($3M) — Varanasi, Índia</span></span></li>
+        <li>- <span data-i18n="changelog.entry.desc">CitySensor sobreviveu 12+ meses em produção: quedas de energia, falta de internet, 50°C+ — zero perda de dados de análise.</span></li>
+      </ol>
     </div>
   </section>
 
@@ -898,7 +931,7 @@
         <h3><span data-i18n="exp.citydata.role">Senior Mobile Engineer</span> — CityData.ai</h3>
         <span class="resume-period">2021 — <span data-i18n="common.present">presente</span></span>
       </div>
-      <p data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time.</p>
+      <p data-i18n="exp.citydata.desc">Dono do app Flutter de sensoriamento de campo numa empresa de mobility intelligence atuante em mais de 1.500 cidades: sensores autônomos de visão computacional instalados em postes de rua, com deployments reais na Índia e em parceiros nos Estados Unidos. Construí o modo kiosk (Device Owner), pipeline de atualização OTA, telemetria de frota e modelos YOLO para detecção de pessoas e veículos — além de mentoria técnica formal a outros desenvolvedores do time. Um dos sistemas que ajudei a construir — o CityFlow — venceu o Sustainable Cities Challenge da Toyota Mobility Foundation (US$ 3M) em Varanasi, cidade com mais de 170 milhões de visitantes/ano.</p>
       <p class="resume-stack">Flutter · Firebase · <span data-i18n="chip.android_native">Android nativo</span> · OTA · YOLO · Codemagic</p>
     </article>
 

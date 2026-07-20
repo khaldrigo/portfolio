@@ -433,6 +433,7 @@ html[lang="en"] .lang-en { color: var(--accent); }
 
 .telemetry-row dt { color: var(--text-faint); }
 .telemetry-row dd { margin: 0; color: var(--text); font-weight: 500; }
+.telemetry-row-award dt, .telemetry-row-award dd { color: var(--accent-2); }
 
 /* ---------------------------------------------------------- */
 /* Stats bar                                                    */
@@ -575,7 +576,14 @@ html[lang="en"] .lang-en { color: var(--accent); }
   box-shadow: 0 24px 48px -28px hsl(var(--shadow-color) / 0.55);
 }
 
-.project-card-top { margin-bottom: 4px; }
+.project-card-top { margin-bottom: 4px; display: flex; flex-wrap: wrap; gap: 8px; }
+
+.status-pill-award {
+  background: var(--accent-2-soft);
+  color: var(--accent-2);
+  font-weight: 600;
+  padding: 5px 12px;
+}
 
 .status-pill {
   display: inline-flex;
